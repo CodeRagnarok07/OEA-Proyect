@@ -1,0 +1,12 @@
+@use 'vars' as v;
+
+@import 'mixins';
+
+h1 {
+    font-size: 5rem;
+    font-weight: 900;
+
+    @include bp(v.$md) {
+        font-size: 10rem;
+    }
+}
