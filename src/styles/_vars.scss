@@ -1,21 +1,48 @@
-// breakpoints
+/*************** BREACKPOINTS ***************/
 $sm: 360px;
 $md: 768px;
 $lg: 1024px;
 $xl: 1360px;
 
-// themes
 
+/*************** COLORS ***************/
+$naranja:#F27334;
+
+$blue1: #39619A;
+$blue2: #406AA7;
+$blue3: #7396FF;
+
+$gray1: #F1F4F7;
+$gray2: #ECF0F4;
+$gray3: #CED5DC;
+$gray4: #A5AAAE;
+
+/*************** THEMES ***************/
 $black: #0B0F22;
 $white: #FFFFFF;
 
-$light1: #F1F4F7;
-$light2: #ECF0F4;
-$light3: #CED5DC;
-$light4: #A5AAAE;
+$light1: $gray1;
+$light2: $gray2;
+$light3: $gray3;
+$light4: $gray4;
 
-$warning:#F27334;
+$primary: $blue1;
+$secondary: $blue2;
+$primary-light: $blue3;
 
-// Shadows
+$warning: $naranja;
+
+/*************** FONTS SIZE ***************/
+$t-xs: 14px;
+$t-sm: 15px;
+
+$t-normal: 16px; 
+
+$t-md: 20px;
+$t-lg: 24px;
+$t-xl: 32px;
+$t-xl2: 36px;
+
+
 
 

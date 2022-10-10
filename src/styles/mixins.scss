@@ -1,8 +1,24 @@
 
 
 
-@mixin bp ($size) {
+@mixin responsive ($size) {
     @media (min-width: $size) {
          @content; 
     }
+}
+
+
+
+@mixin font($size:16px, $lh:20px,   ) {
+    font-size: $size;
+    line-height: $lh;
+
+
+}
+
+@mixin flex($eje1:start, $eje2:start, $direction:row  ) {
+    display: flex;
+    justify-content: $eje1;
+    align-items: $eje2;
+    flex-direction: $direction;
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "concurrently \"npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles/resets.css --watch\" \"sass --watch ./src/styles/main.scss ./dist/styles/styles.css\""
+    "build": "concurrently \"npx tailwindcss -i ./src/styles/tailwind.css -o ./src/dist/styles/resets.css --watch\" \"sass --watch ./src/styles/main.scss ./src/dist/styles/styles.css\""
   },
   "keywords": [],
   "author": "",

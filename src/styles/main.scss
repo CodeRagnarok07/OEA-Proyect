@@ -1,12 +1,23 @@
 @use 'vars' as v;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import 'mixins';
+@import 'utils';
+@import 'components';
+@import 'styles';
 
-h1 {
-    font-size: 5rem;
-    font-weight: 900;
+*,
+html {
+    box-sizing: border-box;
+    // transition: all .5s ease;
 
-    @include bp(v.$md) {
-        font-size: 10rem;
+    &::before,
+    &::after {
+        box-sizing: inherit;
     }
+
 }
+
+
+
+

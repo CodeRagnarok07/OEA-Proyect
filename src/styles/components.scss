@@ -1,0 +1,12 @@
+
+
+.navbar{
+    background-color: v.$primary;
+    padding: 24px 0px;
+    color: v.$white;
+    
+    .nav-cont{
+        @include flex(space-between, center);
+    }
+
+}

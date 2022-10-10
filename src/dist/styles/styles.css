@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*************** BREACKPOINTS ***************/
+/*************** COLORS ***************/
+/*************** THEMES ***************/
+/*************** FONTS SIZE ***************/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 88.2%;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 1360px;
+  }
+}
+
+.navbar {
+  background-color: #39619A;
+  padding: 24px 0px;
+  color: #FFFFFF;
+}
+.navbar .nav-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+/*************** FONTS ***************/
+.font-xs, h6, small {
+  font-size: 11px;
+  line-height: 13.41px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .font-xs, h6, small {
+    font-size: 14px;
+    line-height: 17.07px;
+  }
+}
+
+.font-sm, h5 {
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .font-sm, h5 {
+    font-size: 15px;
+    line-height: 18.29px;
+  }
+}
+
+.font-normal, body,
+p {
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .font-normal, body,
+p {
+    font-size: 16px;
+    line-height: 19.5px;
+  }
+}
+
+.font-md, h4 {
+  font-size: 14px;
+  line-height: 14.63px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .font-md, h4 {
+    font-size: 20px;
+    line-height: 24.38px;
+  }
+}
+
+.font-lg, h3 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .font-lg, h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.font-xl, h2 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .font-xl, h2 {
+    font-size: 32px;
+    line-height: 29px;
+  }
+}
+
+.font-xl2, h1 {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .font-xl2, h1 {
+    font-size: 36px;
+    line-height: 29px;
+  }
+}
+
+body,
+p {
+  font-family: "Montserrat";
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+*::before, *::after,
+html::before,
+html::after {
+  box-sizing: inherit;
+}
+
+/*# sourceMappingURL=styles.css.map */
