@@ -15,6 +15,17 @@
   }
 }
 
+.img-gradient {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+@media (min-width: 768px) {
+  .img-gradient {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
 .navbar {
   background-color: #39619A;
   padding: 24px 0px;
@@ -27,14 +38,22 @@
   flex-direction: row;
 }
 
+.footer {
+  background-color: #39619A;
+  padding: 48px 0px;
+  color: #FFFFFF;
+}
+
 /*************** FONTS ***************/
-.font-xs, h6, small {
+.font-xs, h6,
+small {
   font-size: 11px;
   line-height: 13.41px;
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  .font-xs, h6, small {
+  .font-xs, h6,
+small {
     font-size: 14px;
     line-height: 17.07px;
   }
@@ -98,7 +117,7 @@ p {
 @media (min-width: 768px) {
   .font-xl, h2 {
     font-size: 32px;
-    line-height: 29px;
+    line-height: 39.01px;
   }
 }
 
@@ -110,7 +129,7 @@ p {
 @media (min-width: 768px) {
   .font-xl2, h1 {
     font-size: 36px;
-    line-height: 29px;
+    line-height: 43.88px;
   }
 }
 
@@ -118,6 +137,37 @@ body,
 p {
   font-family: "Montserrat";
   font-feature-settings: "pnum" on, "lnum" on;
+}
+
+/*************** BUTTONS ***************/
+button {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.75rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+button.btn-lg {
+  padding: 24px;
+}
+button.btn-sm {
+  padding: 12px;
+}
+button.primary {
+  background-color: #39619A;
+  color: #FFFFFF;
+}
+button.light {
+  background-color: #F1F4F7;
+  color: #39619A;
+  border: 1.5px #ECF0F4 solid;
+}
+button.white {
+  background-color: #FFFFFF;
+  color: #39619A;
 }
 
 *,
