@@ -114,6 +114,21 @@
   padding: 2rem;
   width: 458px;
 }
+.modal .card.card-login .card-login-title {
+  margin: 0.5rem 0rem 2.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.modal .card.card-login .card-login-helper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.modal .card.card-login input[type=submit] {
+  margin: 1.25rem 0rem 2.25rem;
+}
 @media (min-width: 768px) {
   .modal {
     padding: 2.25rem;
@@ -232,7 +247,7 @@ button.btn-close,
   width: 100%;
   border-radius: 4px;
   border: 1.5px solid #CED5DC;
-  padding: 40px 0px;
+  padding: 40px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,9 +262,12 @@ button.btn-close,
     align-items: center;
     flex-direction: column;
     gap: 0;
-    padding: 78px 0px;
+    padding: 78px 100px;
     gap: 30px;
   }
+}
+.btn-section.btn-section-category p {
+  min-width: max-content;
 }
 .btn-section.btn-section-category:hover {
   color: #39619A;
@@ -261,6 +279,44 @@ a.link {
   color: #39619A;
   font-weight: 500;
   text-decoration: underline;
+}
+
+.header .title {
+  margin-bottom: 0.75rem;
+}
+
+.left-bar {
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .left-bar {
+    margin-top: 0px;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .main-container {
+    margin-top: 4rem;
+    flex-direction: row;
+  }
+}
+.main-container main {
+  width: 100%;
+}
+.main-container main h3:first {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .main-container hr.separador {
+    border: transparent;
+    width: 150px;
+  }
 }
 
 /*************** FONTS ***************/
@@ -447,6 +503,21 @@ footer {
   align-items: center;
   flex-direction: row;
   gap: 0;
+}
+/*************** select ***************/
+.select-category-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 2.25rem;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .select-category-container {
+    flex-direction: row;
+    width: 100%;
+    width: min-content;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

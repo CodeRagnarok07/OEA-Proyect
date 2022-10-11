@@ -10,7 +10,7 @@
 }
 
 .footer {
-    
+
     background-color: v.$primary;
     padding: 24px;
     color: v.$white;
@@ -84,7 +84,31 @@
         &.card-login {
             padding: 2rem;
             width: 458px;
+
+            .card-login-title {
+                margin: 0.5rem 0rem 2.25rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 500;
+
+            }
+
+            .card-login-helper {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+
+            }
+
+            input[type="submit"] {
+                margin: 1.25rem 0rem 2.25rem;
+            }
+
+
         }
+
+
     }
 
 
@@ -216,19 +240,20 @@ button,
         width: 100%;
         border-radius: 4px;
         border: 1.5px solid v.$light3;
-        padding: 40px 0px;
+        padding: 40px 100px;
 
         @include flex(center, center, row);
         gap: 12px;
 
         @include responsive(v.$md) {
             @include flex(center, center, column);
-
-            padding: 78px 0px;
-
+            padding: 78px 100px;
             gap: 30px;
         }
-        
+        p{
+            min-width: max-content;
+        }
+
         &:hover {
             color: v.$primary;
             background-color: v.$light2;
@@ -247,4 +272,54 @@ a {
         font-weight: 500;
         text-decoration: underline;
     }
+}
+
+// 
+
+.header {
+
+    .title {
+        margin-bottom: 0.75rem;
+    }
+
+}
+
+.left-bar {
+    margin-top: 1.5rem;
+
+    @include responsive(v.$md) {
+        margin-top: 0px;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @include responsive(v.$md) {
+        margin-top: 4rem;
+        flex-direction: row;
+
+    }
+
+    main {
+        width: 100%;
+        h3 {
+            &:first {
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    hr.separador {
+        @include responsive(v.$md) {
+            border: transparent;
+            width: 150px;
+        }
+    }
+
+
+    // flex flex-col md:flex-row gap-6 md:mt-16
 }
