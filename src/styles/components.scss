@@ -10,13 +10,7 @@
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    margin-top: auto;
-    margin-bottom: 0px;
+    
     background-color: v.$primary;
     padding: 24px;
     color: v.$white;
@@ -67,6 +61,9 @@
     }
 
 }
+
+/*************** forms and utils ***************/
+
 
 .modal {
     position: fixed;
@@ -133,4 +130,121 @@ select {
 
 
 
+}
+
+/*************** BUTTONS ***************/
+
+button,
+.btn {
+    cursor: pointer;
+
+    padding: 16px 20px;
+    @include flex(center, center);
+    gap: 0.75rem;
+    border-radius: 4px;
+
+    text-transform: uppercase;
+
+    // size
+
+    &.btn-lg {
+        padding: 24px;
+    }
+
+    &.btn-sm {
+        padding: 12px;
+    }
+
+    // theme
+    &.primary {
+        background-color: v.$primary;
+        color: v.$white;
+    }
+
+    &.light {
+        background-color: v.$light1;
+        color: v.$primary;
+        border: 1.5px v.$light2 solid;
+    }
+
+    &.white {
+        background-color: v.$white;
+        color: v.$primary;
+    }
+
+    // type
+
+    &.btn-close {
+        margin-left: auto;
+        @include flex(center, center);
+        // flex justify-center items-center ml-auto 
+    }
+
+}
+
+.btn-section {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: pre-wrap;
+    padding: 18px;
+    gap: 10px;
+
+    @include responsive(v.$md) {
+        padding: 16px 14px;
+        justify-content: space-between;
+        min-width: 233px;
+
+
+    }
+
+    &.current {
+        color: v.$primary;
+        background-color: v.$light2;
+        font-weight: 600;
+        border-bottom: 2px v.$primary solid;
+
+        @include responsive(v.$md) {
+            border-bottom: 0px v.$primary solid;
+            border-right: 2px v.$primary solid;
+
+        }
+    }
+
+    &.btn-section-category {
+        width: 100%;
+        border-radius: 4px;
+        border: 1.5px solid v.$light3;
+        padding: 40px 0px;
+
+        @include flex(center, center, row);
+        gap: 12px;
+
+        @include responsive(v.$md) {
+            @include flex(center, center, column);
+
+            padding: 78px 0px;
+
+            gap: 30px;
+        }
+        
+        &:hover {
+            color: v.$primary;
+            background-color: v.$light2;
+        }
+
+    }
+
+
+
+}
+
+a {
+    &.link {
+        text-transform: uppercase;
+        color: v.$primary;
+        font-weight: 500;
+        text-decoration: underline;
+    }
 }

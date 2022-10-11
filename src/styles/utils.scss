@@ -20,3 +20,14 @@
     }
 
 }
+
+.active {
+    background-color: v.$light1;
+    color: v.$primary;
+    border: 1.5px v.$light2 solid;
+}
+
+.check{
+    fill: v.$primary;
+}
+

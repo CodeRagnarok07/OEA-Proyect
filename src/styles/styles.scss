@@ -85,7 +85,8 @@ p {
     font-feature-settings: 'pnum' on, 'lnum' on;
     @extend .font-normal;
     position: relative;
-    position: inherit;
+
+
 }
 
 h1 {
@@ -114,58 +115,3 @@ small {
 }
 
 
-/*************** BUTTONS ***************/
-
-button, .btn {
-    padding: 16px 20px;
-    @include flex(center, center);
-    gap: 0.75rem;
-    border-radius: 4px;
-
-    text-transform: uppercase;
-
-    // size
-
-    &.btn-lg {
-        padding: 24px;
-    }
-
-    &.btn-sm {
-        padding: 12px;
-    }
-
-    // theme
-    &.primary {
-        background-color: v.$primary;
-        color: v.$white;
-    }
-
-    &.light {
-        background-color: v.$light1;
-        color: v.$primary;
-        border: 1.5px v.$light2 solid;
-    }
-
-    &.white {
-        background-color: v.$white;
-        color: v.$primary;
-    }
-
-    // type
-
-    &.btn-close{
-        margin-left: auto;
-        @include flex(center,center);
-        // flex justify-center items-center ml-auto 
-    }
-
-}
-
-a{
-    &.link{
-        text-transform: uppercase;
-        color: v.$primary;
-        font-weight: 500;
-        text-decoration: underline;
-    }
-}
