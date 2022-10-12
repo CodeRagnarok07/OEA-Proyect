@@ -3,33 +3,6 @@
 /*************** COLORS ***************/
 /*************** THEMES ***************/
 /*************** FONTS SIZE ***************/
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 88.2%;
-  position: relative;
-}
-@media (min-width: 1024px) {
-  .container {
-    width: 1360px;
-  }
-}
-
-.active {
-  background-color: #F1F4F7;
-  color: #39619A;
-  border: 1.5px #ECF0F4 solid;
-}
-
-.check {
-  fill: #39619A;
-}
-
-.subtitle {
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
 .navbar {
   background-color: #39619A;
   padding: 24px 0px;
@@ -110,35 +83,39 @@
   flex-direction: row;
   gap: 0;
 }
-.modal .card {
+@media (min-width: 768px) {
+  .modal {
+    padding: 2.25rem;
+  }
+}
+
+.card {
+  position: relative;
   border-radius: 0.25rem;
   padding: 1.5rem;
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
   background-color: #FFFFFF;
+  z-index: 9999;
 }
-.modal .card.card-login {
+.card.card-login {
   padding: 2rem;
   width: 458px;
 }
-.modal .card.card-login .card-login-title {
+.card.card-login .card-login-title {
   margin: 0.5rem 0rem 2.25rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
 }
-.modal .card.card-login .card-login-helper {
+.card.card-login .card-login-helper {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 1rem;
 }
-.modal .card.card-login input[type=submit] {
+.card.card-login a.submit,
+.card.card-login input[type=submit] {
   margin: 1.25rem 0rem 2.25rem;
-}
-@media (min-width: 768px) {
-  .modal {
-    padding: 2.25rem;
-  }
 }
 
 .form {
@@ -214,48 +191,6 @@ textarea:active,
   .selection select {
     padding: 0.75rem 1rem;
   }
-}
-
-/*************** theme colors ***************/
-.primary, .bg-primary {
-  background-color: #39619A;
-  color: #FFFFFF;
-}
-
-.light, .bg-light {
-  background-color: #F1F4F7;
-  color: #39619A;
-  border: 1.5px #ECF0F4 solid;
-}
-
-.white, .bg-white {
-  background-color: #FFFFFF;
-  color: #39619A;
-}
-
-.success, .bg-success {
-  background-color: green;
-  color: #39619A;
-}
-
-.info, .bg-info {
-  background-color: yellow;
-  color: #0B0F22;
-}
-
-.warning, .bg-warning {
-  background-color: #F27334;
-  color: #39619A;
-}
-
-.danger, .bg-danger {
-  background-color: red;
-  color: #39619A;
-}
-
-.danger, .bg-danger {
-  background-color: red;
-  color: #FFFFFF;
 }
 
 /*************** BUTTONS ***************/
@@ -497,6 +432,100 @@ p {
   font-family: "Montserrat";
   font-feature-settings: "pnum" on, "lnum" on;
   position: relative;
+}
+
+/*************** theme colors ***************/
+.primary,
+.bg-primary {
+  background-color: #39619A;
+  color: #FFFFFF;
+}
+
+.light,
+.bg-light {
+  background-color: #F1F4F7;
+  color: #39619A;
+  border: 1.5px #ECF0F4 solid;
+}
+
+.white,
+.bg-white {
+  background-color: #FFFFFF;
+  color: #39619A;
+}
+
+.success,
+.bg-success {
+  background-color: green;
+  color: #39619A;
+}
+
+.info,
+.bg-info {
+  background-color: yellow;
+  color: #0B0F22;
+}
+
+.warning,
+.bg-warning {
+  background-color: #F27334;
+  color: #39619A;
+}
+
+.danger,
+.bg-danger {
+  background-color: red;
+  color: #39619A;
+}
+
+.danger,
+.bg-danger {
+  background-color: red;
+  color: #FFFFFF;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 88.2%;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 1360px;
+  }
+}
+
+.active {
+  background-color: #F1F4F7;
+  color: #39619A;
+  border: 1.5px #ECF0F4 solid;
+}
+
+.check {
+  fill: #39619A;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.form_step {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  gap: 0px;
+}
+.form_step .step {
+  flex-shrink: 0;
+  width: 100%;
 }
 
 * {

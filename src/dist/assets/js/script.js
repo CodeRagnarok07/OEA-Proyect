@@ -1,23 +1,44 @@
-(() => {
-    const modal = document.getElementById("modal")
 
-    for (const tooltip of all_tooltip_options) {
+// modal
+const modal = document.getElementsByClassName("modal")[0]
+const handleModal = () => {
+    modal.classList.toggle("hidden")
+}
 
-        const parent = tooltip.parentElement
-
-        tooltip.className += " hidden"
-        parent.className += " parent_tooltip_options"
-
+// form by step
 
 
-        const activador = () => {
-            tooltip.classList.toggle("hidden")
 
-        }
 
-        clicker.onclick = () => activador()
+let current = 1
 
-        parent.appendChild(clicker)
-        parent.appendChild(svg_icons)
+const progres_bar = document.getElementById("bar_progres")
+const form_step = document.getElementById("form_step")
+
+console.log(form_step);
+
+const widthSlider = form_step.children[0].offsetWidth
+
+/* pasos */
+const handleStep = (bool) => {
+    if (bool == true) {
+        form_step.scrollLeft += widthSlider * 1
+        console.log(progres_bar);
+        progres_bar.children[current].classList.add("active")
+
+        current++
+
+    } else if (bool == false) {
+        form_step.scrollLeft -= widthSlider
+        current = current - 1
+        progres_bar.children[current].className = ""
+        console.log(progres_bar)
+
+
     }
-})();
+}
+
+
+
+
+

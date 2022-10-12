@@ -1,0 +1,51 @@
+
+/*************** theme colors ***************/
+
+.primary,
+.bg-primary {
+    background-color: v.$primary;
+    color: v.$white;
+}
+
+.light,
+.bg-light {
+    background-color: v.$light1;
+    color: v.$primary;
+    border: 1.5px v.$light2 solid;
+}
+
+.white,
+.bg-white {
+    background-color: v.$white;
+    color: v.$primary;
+}
+
+.success,
+.bg-success {
+    background-color: v.$success;
+    color: v.$primary;
+}
+
+.info,
+.bg-info {
+    background-color: v.$info;
+    color: v.$black;
+}
+
+.warning,
+.bg-warning {
+    background-color: v.$warning;
+    color: v.$primary;
+}
+
+.danger,
+.bg-danger {
+    background-color: v.$danger;
+    color: v.$primary;
+}
+
+.danger,
+.bg-danger {
+    background-color: v.$danger;
+    color: v.$white;
+}

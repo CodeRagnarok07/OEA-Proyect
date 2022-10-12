@@ -26,3 +26,24 @@
         margin-bottom: 1rem;
     
 }
+
+.hidden {
+    display: none;
+  }
+
+
+// 
+
+.form_step{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    gap: 0px;
+
+    .step{
+        flex-shrink: 0;
+        width: 100%;
+    }
+}
