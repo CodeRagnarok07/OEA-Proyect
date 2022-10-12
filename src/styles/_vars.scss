@@ -8,6 +8,8 @@ $xl: 1360px;
 /*************** COLORS ***************/
 $naranja:#F27334;
 
+
+
 $blue1: #39619A;
 $blue2: #406AA7;
 $blue3: #7396FF;
@@ -30,7 +32,13 @@ $primary: $blue1;
 $secondary: $blue2;
 $primary-light: $blue3;
 
+
+$success : green;
+$info : yellow;
 $warning: $naranja;
+$danger : red;
+$dark : $black;
+
 
 /*************** FONTS SIZE ***************/
 $t-xs: 14px;

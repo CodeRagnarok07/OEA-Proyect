@@ -164,7 +164,7 @@
   flex-direction: column;
   gap: 1.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .form .form-control-group {
     flex-direction: row;
   }
@@ -216,6 +216,48 @@ textarea:active,
   }
 }
 
+/*************** theme colors ***************/
+.primary, .bg-primary {
+  background-color: #39619A;
+  color: #FFFFFF;
+}
+
+.light, .bg-light {
+  background-color: #F1F4F7;
+  color: #39619A;
+  border: 1.5px #ECF0F4 solid;
+}
+
+.white, .bg-white {
+  background-color: #FFFFFF;
+  color: #39619A;
+}
+
+.success, .bg-success {
+  background-color: green;
+  color: #39619A;
+}
+
+.info, .bg-info {
+  background-color: yellow;
+  color: #0B0F22;
+}
+
+.warning, .bg-warning {
+  background-color: #F27334;
+  color: #39619A;
+}
+
+.danger, .bg-danger {
+  background-color: red;
+  color: #39619A;
+}
+
+.danger, .bg-danger {
+  background-color: red;
+  color: #FFFFFF;
+}
+
 /*************** BUTTONS ***************/
 button,
 .btn {
@@ -237,22 +279,6 @@ button.btn-lg,
 button.btn-sm,
 .btn.btn-sm {
   padding: 12px;
-}
-button.primary,
-.btn.primary {
-  background-color: #39619A;
-  color: #FFFFFF;
-}
-button.light,
-.btn.light {
-  background-color: #F1F4F7;
-  color: #39619A;
-  border: 1.5px #ECF0F4 solid;
-}
-button.white,
-.btn.white {
-  background-color: #FFFFFF;
-  color: #39619A;
 }
 button.btn-close,
 .btn.btn-close {
