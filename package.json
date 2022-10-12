@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy":"gh-pages -d ./src/dist",
     "build": "concurrently \"npx tailwindcss -i ./src/styles/tailwind.css -o ./src/dist/styles/resets.css --watch\" \"sass --watch ./src/styles/main.scss ./src/dist/styles/styles.css\""
   },
   "keywords": [],
@@ -13,5 +14,8 @@
     "concurrently": "^7.4.0",
     "sass": "^1.55.0",
     "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

@@ -17,24 +17,24 @@
     border: 1.5px v.$light2 solid;
 }
 
-.check{
+.check {
     fill: v.$primary;
 }
 
 .subtitle {
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
 }
 
 .hidden {
     display: none;
-  }
+}
 
 
 // 
 
-.form_step{
+.form_step {
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -42,8 +42,13 @@
     scroll-behavior: smooth;
     gap: 0px;
 
-    .step{
+    .step {
         flex-shrink: 0;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+
     }
 }

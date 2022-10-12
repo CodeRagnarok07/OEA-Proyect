@@ -113,7 +113,7 @@
   text-align: center;
   gap: 1rem;
 }
-.card.card-login a.submit,
+.card.card-login a.login-submit,
 .card.card-login input[type=submit] {
   margin: 1.25rem 0rem 2.25rem;
 }
@@ -526,6 +526,9 @@ p {
 .form_step .step {
   flex-shrink: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 * {
