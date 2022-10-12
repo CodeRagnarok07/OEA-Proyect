@@ -118,6 +118,11 @@
   margin: 1.25rem 0rem 2.25rem;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .form .form-control {
   display: flex;
   flex-direction: column;
