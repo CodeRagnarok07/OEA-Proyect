@@ -717,8 +717,28 @@ video {
   margin-top: auto;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .h-1\/2 {
@@ -743,6 +763,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[528px\] {
+  height: 528px;
 }
 
 .w-full {
@@ -914,6 +938,10 @@ video {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-\[325px\] {
+    height: 325px;
   }
 
   .md\:w-4\/5 {

@@ -102,13 +102,6 @@ footer {
 
 }
 
-.nextitem {
-    @include flex(start, center);
-
-    @include responsive(v.$md) {}
-
-    // flex flex-col-reverse md:flex-row items-center relative
-}
 
 /*************** select ***************/
 
@@ -135,6 +128,7 @@ footer {
 
     display: flex;
     gap: 0.75rem;
+    margin-bottom: 1.25rem;
 
     div {
         background: v.$light2;
@@ -148,3 +142,14 @@ footer {
 
 }
 
+
+
+/***************  ***************/
+
+.nextitem {
+    @include flex(start, center);
+
+    @include responsive(v.$md) {}
+
+    // flex flex-col-reverse md:flex-row items-center relative
+}
