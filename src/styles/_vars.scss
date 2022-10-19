@@ -36,9 +36,8 @@ $primary-light: $blue3;
 $success : green;
 $info : yellow;
 $warning: $naranja;
-$danger : red;
+$danger : #DD2E2E;
 $dark : $black;
-
 
 /*************** FONTS SIZE ***************/
 $t-xs: 14px;
@@ -52,9 +51,11 @@ $t-xl: 32px;
 $t-xl2: 36px;
 
 
-
-
 /*************** BORDER RADIUS ***************/
-
 $border-radius-sm: 4px;
 $border-radius-md: 0.25rem;
+
+
+// ************** TAGS THEMES ************* // 
+
+

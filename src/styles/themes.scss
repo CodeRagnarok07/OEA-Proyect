@@ -1,4 +1,3 @@
-
 /*************** theme colors ***************/
 
 .primary,
@@ -47,5 +46,38 @@
 .danger,
 .bg-danger {
     background-color: v.$danger;
-    color: v.$white;
+    color: v.$danger;
 }
+
+
+// ********* TAG THEMES *********//
+
+// $rgb-red:239, 68, 68;
+// $rgb-orange: 242, 115, 52;
+// $rgb-green: 36, 168, 81;
+
+// :root{
+//     --red: 239, 68, 68;
+//     --orange: $rgb-orange;
+//     --green: $rgb-green;
+// }
+
+
+// .tag-red {
+//     --tw-text-opacity: 1;
+//     color: rgb(var(--red));
+//     background-color: rgb(var(--red) / var(--tw-bg-opacity));
+// }
+
+// .tag-orange {
+//     --tw-text-opacity: 1;
+//     color: rgb(var(--orange));
+//     background-color: rgb(var(--orange) / var(--tw-bg-opacity));
+// }
+
+// .tag-green {
+//     --tw-text-opacity: 1;
+//     color: rgb(var(--green));
+//     background-color: rgb(var(--green) / var(--tw-bg-opacity));
+// }
+
