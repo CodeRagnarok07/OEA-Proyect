@@ -13,5 +13,5 @@
 
 
 .tag-red{
-    @apply bg-opacity-30 bg-[var(--red)]
+    @apply bg-opacity-30 
 }
