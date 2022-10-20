@@ -2,12 +2,22 @@
 // modal
 const modal = document.getElementsByClassName("modal")[0]
 const handleModal = () => {
-    modal.classList.toggle("hidden")
+    modal.classList.toggle("hidden-modal")
 }
 
 // form by step
 
 
+const showSidebar = ()=>{
+
+    const modal = document.getElementsByClassName("modal")[0]
+    const sidebar = document.getElementById("sidebar")
+
+    modal.classList.toggle("hidden-modal")
+    sidebar.classList.toggle("hidden-modal")
+
+
+}
 
 
 let current = 1
