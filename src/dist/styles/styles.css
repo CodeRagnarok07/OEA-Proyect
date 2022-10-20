@@ -255,6 +255,14 @@ a.link {
     margin-top: 0px;
   }
 }
+.left-bar.dashboard {
+  display: hidden;
+}
+@media (min-width: 768px) {
+  .left-bar.dashboard {
+    display: flex;
+  }
+}
 
 .btn-section {
   cursor: pointer;
@@ -515,6 +523,24 @@ p {
   color: #DD2E2E;
 }
 
+.tag-red {
+  --tw-text-opacity: 1;
+  color: #DD2E2E;
+  background-color: rgba(221, 46, 46, 0.1019607843);
+}
+
+.tag-orange {
+  --tw-text-opacity: 1;
+  color: #f27334;
+  background-color: rgba(242, 115, 52, 0.1019607843);
+}
+
+.tag-green {
+  --tw-text-opacity: 1;
+  color: #24a851;
+  background-color: rgba(36, 168, 81, 0.1019607843);
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -542,10 +568,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.hidden {
-  display: none;
-}
-
 .form_step {
   display: flex;
   flex-direction: row;
@@ -560,6 +582,29 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.card-group {
+  display: flex;
+}
+.card-group > div {
+  width: 100%;
+}
+
+.item_sumary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F4F7;
+  gap: 0.5rem;
+  padding: 1rem 0px;
+}
+@media (min-width: 768px) {
+  .item_sumary {
+    padding: 2rem 0px;
+    gap: 1rem;
+  }
 }
 
 * {
@@ -712,12 +757,21 @@ footer {
 .time-card .time-card-icons {
   margin: 3rem;
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.5rem;
 }
 .time-card .time-card-icons .item-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
   width: 100%;
+  gap: 1rem;
+}
+.time-card .time-card-icons .item-card > div {
+  display: flex;
+  flex-direction: column;
 }
 .time-card .time-card-icons .item-card h5 {
   margin-bottom: 0.25rem;
@@ -726,6 +780,20 @@ footer {
 .time-card .time-card-icons .item-card p {
   font-weight: 600;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .time-card .time-card-icons {
+    flex-direction: row;
+    gap: 0px;
+  }
+  .time-card .time-card-icons .item-card {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .time-card .time-card-icons .item-card > div {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .progres {
@@ -742,34 +810,28 @@ footer {
   height: 100%;
 }
 
-.list {
+.list-dashboard {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.list .item-list {
+.list-dashboard .item-list {
   padding: 2rem 24px 26px;
   border: 1.5px solid #CED5DC;
   border-radius: 4px;
 }
-.list .item-list .item-list-header {
+.list-dashboard .item-list .item-list-header {
   display: flex;
   justify-content: space-between;
 }
-.list .item-list .file {
+.list-dashboard .item-list .file {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   @apply flex gap-3 items-center;
 }
-.list .item-list .file p {
+.list-dashboard .item-list .file p {
   text-transform: uppercase;
-}
-
-.tag {
-  display: flex;
-  align-items: center;
-  padding: 0px 0.75;
 }
 
 /*# sourceMappingURL=styles.css.map */

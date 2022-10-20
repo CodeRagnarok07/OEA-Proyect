@@ -50,34 +50,23 @@
 }
 
 
-// ********* TAG THEMES *********//
+//********** TAG THEME ************ //
 
-// $rgb-red:239, 68, 68;
-// $rgb-orange: 242, 115, 52;
-// $rgb-green: 36, 168, 81;
+.tag-red {
+    --tw-text-opacity: 1;
+    color: v.$red;
+    background-color: v.$red-light;
+}
 
-// :root{
-//     --red: 239, 68, 68;
-//     --orange: $rgb-orange;
-//     --green: $rgb-green;
-// }
+.tag-orange {
+    --tw-text-opacity: 1;
+    color: v.$orange;
+    background-color: v.$orange-light;
+}
 
-
-// .tag-red {
-//     --tw-text-opacity: 1;
-//     color: rgb(var(--red));
-//     background-color: rgb(var(--red) / var(--tw-bg-opacity));
-// }
-
-// .tag-orange {
-//     --tw-text-opacity: 1;
-//     color: rgb(var(--orange));
-//     background-color: rgb(var(--orange) / var(--tw-bg-opacity));
-// }
-
-// .tag-green {
-//     --tw-text-opacity: 1;
-//     color: rgb(var(--green));
-//     background-color: rgb(var(--green) / var(--tw-bg-opacity));
-// }
+.tag-green {
+    --tw-text-opacity: 1;
+    color: v.$green;
+    background-color: v.$green-light;
+}
 

@@ -281,6 +281,14 @@ a {
 
         }
     }
+
+    &.dashboard{
+        display: hidden;
+
+        @include responsive(v.$md){
+            display: flex;
+        }
+    }
 }
 
 .btn-section {

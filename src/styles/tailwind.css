@@ -2,16 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --red:#DD2E2E;
-}
 
-
-/* .tag{
-    @apply 
-}; */
-
-
-.tag-red{
-    @apply bg-opacity-30 
+.tag{
+    @apply flex items-center px-3
 }
