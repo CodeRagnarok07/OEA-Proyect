@@ -76,3 +76,23 @@
         gap: 1rem;
     }
 }
+
+.hidden-movil{
+    display: hidden;
+    @include responsive(v.$md){
+        display: flex;
+    }
+}
+
+.avatar{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+
+    &.avatar-sm{
+        height: 20px;
+        width: auto;
+
+    }
+}

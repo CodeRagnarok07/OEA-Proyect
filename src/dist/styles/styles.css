@@ -80,7 +80,7 @@
   position: absolute;
   z-index: 400;
   top: 120%;
-  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   padding: 0.25rem 0;
@@ -89,21 +89,29 @@
   background: #39619A;
   color: #FFFFFF;
 }
+@media (min-width: 768px) {
+  .tooltip .tooltip_options {
+    left: 0;
+    right: auto;
+  }
+}
 .tooltip .tooltip_options.hidden {
   display: none;
 }
 .tooltip .tooltip_options .option {
-  text-transform: uppercase;
-  padding: 0.25rem 24px;
-  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 24px;
   gap: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .tooltip .tooltip_options .option:hover {
-  font-weight: 700;
   background: #406AA7;
+}
+.tooltip .tooltip_options .option > span {
+  display: flex;
+  align-items: center;
 }
 
 /*************** forms and utils ***************/
@@ -680,6 +688,26 @@ p {
     padding: 2rem 0px;
     gap: 1rem;
   }
+}
+
+.hidden-movil {
+  display: hidden;
+}
+@media (min-width: 768px) {
+  .hidden-movil {
+    display: flex;
+  }
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.avatar.avatar-sm {
+  height: 20px;
+  width: auto;
 }
 
 * {

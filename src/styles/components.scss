@@ -77,7 +77,13 @@
         position: absolute;
         z-index: 400;
         top: 120%;
-        left: 0;
+        right: 0;
+
+        @include responsive(v.$md) {
+            left: 0;
+            right: auto;
+
+        }
 
         display: flex;
         flex-direction: column;
@@ -96,18 +102,22 @@
         }
 
         .option {
-            text-transform: uppercase;
-            padding: 0.25rem 24px;
-            font-weight: 700;
+            cursor: pointer;
+
+            padding: 0.5rem 24px;
             gap: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             &:hover {
-                font-weight: 700;
                 background: v.$secondary;
 
+            }
+
+            >span{
+                display: flex;
+                align-items: center;
             }
         }
 
