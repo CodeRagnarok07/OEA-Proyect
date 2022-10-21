@@ -56,6 +56,66 @@
 
 }
 
+/********** Tooltip ************/
+// ********** tooltip ********* //
+.tooltip {
+    position: relative;
+    gap: 0.75rem;
+    cursor: pointer;
+
+    .clicker {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+
+    .tooltip_options {
+
+        position: absolute;
+        z-index: 400;
+        top: 120%;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+
+
+        padding: 0.25rem 0;
+        border: 2px v.$white solid;
+        border-radius: 0.5rem;
+
+        background: v.$primary;
+        color: v.$white;
+
+
+        &.hidden {
+            display: none;
+        }
+
+        .option {
+            text-transform: uppercase;
+            padding: 0.25rem 24px;
+            font-weight: 700;
+            gap: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover {
+                font-weight: 700;
+                background: v.$secondary;
+
+            }
+        }
+
+    }
+
+
+}
+
 /*************** forms and utils ***************/
 .modal {
     position: fixed;
@@ -70,7 +130,7 @@
     @include responsive(v.$md) {
         padding: 2.25rem;
 
-        &.modal-util{
+        &.modal-util {
             display: hidden;
             visibility: hidden;
             position: relative;
@@ -78,7 +138,7 @@
 
     }
 
-   
+
 }
 
 .card {
@@ -154,7 +214,6 @@
     }
 
 }
-
 
 input,
 textarea,
@@ -297,7 +356,7 @@ a {
     top: 6rem;
     position: fixed;
     left: 0px;
-    right:0px;
+    right: 0px;
     padding: 1rem;
 
 
@@ -307,7 +366,8 @@ a {
         padding: 0px;
         top: 0px;
         display: flex;
-        &.hidden-modal{
+
+        &.hidden-modal {
             display: flex;
         }
 
@@ -317,14 +377,14 @@ a {
         display: flex;
         width: auto;
 
-            flex-direction: column;
-            margin-top: 2.25rem;
-            gap: 0.75rem;
+        flex-direction: column;
+        margin-top: 2.25rem;
+        gap: 0.75rem;
 
-            &.section-select {
-                margin-top: 0px;
+        &.section-select {
+            margin-top: 0px;
 
-            }
+        }
 
     }
 }

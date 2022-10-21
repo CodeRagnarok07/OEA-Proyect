@@ -63,6 +63,49 @@
   }
 }
 
+/********** Tooltip ************/
+.tooltip {
+  position: relative;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+.tooltip .clicker {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.tooltip .tooltip_options {
+  position: absolute;
+  z-index: 400;
+  top: 120%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0;
+  border: 2px #FFFFFF solid;
+  border-radius: 0.5rem;
+  background: #39619A;
+  color: #FFFFFF;
+}
+.tooltip .tooltip_options.hidden {
+  display: none;
+}
+.tooltip .tooltip_options .option {
+  text-transform: uppercase;
+  padding: 0.25rem 24px;
+  font-weight: 700;
+  gap: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tooltip .tooltip_options .option:hover {
+  font-weight: 700;
+  background: #406AA7;
+}
+
 /*************** forms and utils ***************/
 .modal {
   position: fixed;
