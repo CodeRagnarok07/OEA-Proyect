@@ -551,6 +551,14 @@ p {
   position: relative;
 }
 
+span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 /*************** theme colors ***************/
 .primary,
 .bg-primary {
@@ -565,9 +573,14 @@ p {
   border: 1.5px #ECF0F4 solid;
 }
 
-.white,
-.bg-white {
-  background-color: #FFFFFF;
+.light2,
+.bg-light2 {
+  background-color: #ECF0F4;
+  color: #0B0F22;
+  border: 1.5px #ECF0F4 solid;
+}
+
+.text-primary {
   color: #39619A;
 }
 
@@ -602,6 +615,11 @@ p {
   color: #DD2E2E;
 }
 
+.bg-gray {
+  color: #0B0F22;
+  background-color: #F1F4F7;
+}
+
 .tag-red {
   --tw-text-opacity: 1;
   color: #DD2E2E;
@@ -618,6 +636,18 @@ p {
   --tw-text-opacity: 1;
   color: #24a851;
   background-color: rgba(36, 168, 81, 0.1019607843);
+}
+
+.tag-purple {
+  --tw-text-opacity: 1;
+  color: #7139B8;
+  background-color: rgba(113, 57, 184, 0.1019607843);
+}
+
+.tag-gray {
+  --tw-text-opacity: 1;
+  color: #0B0F22;
+  background-color: #ECF0F4;
 }
 
 .container {
@@ -907,8 +937,10 @@ footer {
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
 }
+.progres .progres-bar.light {
+  background: rgba(165, 170, 174, 0.2);
+}
 .progres .progres-bar .cont-progres-bar {
-  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
 }
@@ -920,8 +952,26 @@ footer {
 }
 .list-dashboard .item-list {
   padding: 2rem 24px 26px;
-  border: 1.5px solid #CED5DC;
+  border: 2px solid #CED5DC;
   border-radius: 4px;
+  cursor: pointer;
+}
+.list-dashboard .item-list:hover {
+  background: #ECF0F4;
+  border: 2px solid #406AA7;
+}
+.list-dashboard .item-list.item-list-inactive {
+  position: relative;
+}
+.list-dashboard .item-list.item-list-inactive ::before {
+  content: "";
+  position: absolute;
+  background: #FFFFFF;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
 }
 .list-dashboard .item-list .item-list-header {
   display: flex;
@@ -935,6 +985,31 @@ footer {
 }
 .list-dashboard .item-list .file p {
   text-transform: uppercase;
+}
+
+.filtro {
+  background-color: transparent;
+  outline: none;
+  color: #39619A;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.filtro:hover, .filtro:focus, .filtro:target, .filtro:active {
+  outline: none;
+}
+
+.modal-dashboard {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 25;
+  background: rgba(11, 15, 34, 0.7);
+}
+.modal-dashboard.hidden-modal {
+  display: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

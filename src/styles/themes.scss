@@ -13,9 +13,15 @@
     border: 1.5px v.$light2 solid;
 }
 
-.white,
-.bg-white {
-    background-color: v.$white;
+.light2,
+.bg-light2 {
+    background-color: v.$light2;
+    color: v.$black;
+    border: 1.5px v.$light2 solid;
+}
+
+
+.text-primary {
     color: v.$primary;
 }
 
@@ -49,6 +55,12 @@
     color: v.$danger;
 }
 
+.bg-gray {
+    color: v.$black;
+    background-color: v.$light1;
+}
+
+
 
 //********** TAG THEME ************ //
 
@@ -69,4 +81,18 @@
     color: v.$green;
     background-color: v.$green-light;
 }
+
+.tag-purple {
+    --tw-text-opacity: 1;
+    color: v.$purple;
+    background-color: v.$purple-light;
+}
+
+.tag-gray {
+    --tw-text-opacity: 1;
+    color: v.$black;
+    background-color: v.$light2;
+}
+
+
 

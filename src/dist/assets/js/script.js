@@ -48,6 +48,14 @@ const handleModal = () => {
     modal.classList.toggle("hidden-modal")
 }
 
+const showModal= (query)=>{
+    const modal = document.querySelector(query)
+    modal.classList.toggle("hidden-modal")
+
+}
+
+
+
 // form by step
 
 const showSidebar = ()=>{
