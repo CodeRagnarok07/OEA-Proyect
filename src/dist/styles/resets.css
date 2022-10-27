@@ -604,43 +604,6 @@ video {
   left: 0px;
 }
 
-.inset-y-0 {
-  top: 0px;
-  bottom: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
-.top-\[100\%\] {
-  top: 100%;
-}
-
-.top-\[110\%\] {
-  top: 110%;
-}
-
-.top-\[120\%\] {
-  top: 120%;
-}
-
-.top-\[130\%\] {
-  top: 130%;
-}
-
-.top-\[140\%\] {
-  top: 140%;
-}
-
-.top-\[150\%\] {
-  top: 150%;
-}
-
 .z-\[11\] {
   z-index: 11;
 }
@@ -665,9 +628,9 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mx-\[80\%\] {
-  margin-left: 80%;
-  margin-right: 80%;
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mt-12 {
@@ -726,6 +689,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-\[6px\] {
+  margin-top: 6px;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -734,20 +701,8 @@ video {
   margin-right: 1.25rem;
 }
 
-.mt-\[20\%\] {
-  margin-top: 20%;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-\[5px\] {
-  margin-top: 5px;
-}
-
-.mt-\[6px\] {
-  margin-top: 6px;
+.mb-7 {
+  margin-bottom: 1.75rem;
 }
 
 .flex {
@@ -766,40 +721,12 @@ video {
   height: 528px;
 }
 
-.h-\[80\%\] {
-  height: 80%;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-\[20px\] {
-  height: 20px;
-}
-
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
 }
 
 .cursor-pointer {
@@ -830,45 +757,19 @@ video {
   gap: 0.5rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
-.rounded-\[4px\] {
-  border-radius: 4px;
-}
-
-.border {
-  border-width: 1px;
-}
-
 .border-r {
   border-right-width: 1px;
-}
-
-.border-red-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(254 202 202 / var(--tw-border-opacity));
 }
 
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ECF0F4\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 240 244 / var(--tw-bg-opacity));
-}
-
-.p-9 {
-  padding: 2.25rem;
 }
 
 .p-4 {
@@ -937,16 +838,8 @@ video {
     height: 325px;
   }
 
-  .md\:max-w-\[70\%\] {
-    max-width: 70%;
-  }
-
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:items-center {
-    align-items: center;
   }
 
   .md\:border-r {

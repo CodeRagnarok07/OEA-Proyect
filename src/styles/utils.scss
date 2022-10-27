@@ -203,12 +203,22 @@ textarea,
 }
 
 .form_step {
-    display: flex;
-    flex-direction: row;
     overflow: hidden;
-    flex-wrap: nowrap;
+
     scroll-behavior: smooth;
-    gap: 0px;
+    scroll-snap-type: x mandatory;
+
+    z-index: 10;
+    --grid:1;
+
+    --g: 5px;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (var(--grid) - 1)*var(--g))/var(--grid));
+    grid-gap: var(--g);
+
+
 
     .step {
         flex-shrink: 0;
@@ -216,6 +226,12 @@ textarea,
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+
+        
+        width: 100%;
+
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
 
 
     }
