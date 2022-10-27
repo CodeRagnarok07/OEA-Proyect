@@ -160,25 +160,30 @@ textarea,
     border: 3px solid v.$light3;
 
     @include responsive(v.$md) {
-
         padding: 0.75rem 1rem;
-    }
+    };
 
-    ;
-
+    
     &:hover,
     &:focus,
     &:target,
     &:active {
         outline: none;
     }
+    &.disable,
+    &:disabled{
+        background-color: v.$light1;
+        border: 3px solid transparent;
+
+    }
+
 
 }
 
 .selection {
     padding: 0rem;
-    padding-right: 1rem;
-
+    padding-right: 1rem;    
+    
     select {
         padding: 1rem;
         width: 100%;
@@ -190,6 +195,10 @@ textarea,
             outline: none;
             border-color: transparent;
         }
+        &:disabled{         
+            background-color: v.$light1;
+        }
+
 
         @include responsive(v.$md) {
 

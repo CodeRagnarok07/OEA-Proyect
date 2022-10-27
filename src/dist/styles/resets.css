@@ -721,6 +721,10 @@ video {
   height: 528px;
 }
 
+.h-\[323px\] {
+  height: 323px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -836,6 +840,10 @@ video {
 
   .md\:h-\[325px\] {
     height: 325px;
+  }
+
+  .md\:h-\[400px\] {
+    height: 400px;
   }
 
   .md\:flex-row {

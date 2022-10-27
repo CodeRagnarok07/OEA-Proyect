@@ -416,6 +416,16 @@ textarea:active,
 .selection:active {
   outline: none;
 }
+.input-style.disable, .input-style:disabled,
+input.disable,
+input:disabled,
+textarea.disable,
+textarea:disabled,
+.selection.disable,
+.selection:disabled {
+  background-color: #F1F4F7;
+  border: 3px solid transparent;
+}
 
 .selection {
   padding: 0rem;
@@ -428,6 +438,9 @@ textarea:active,
 .selection select:hover, .selection select:focus, .selection select:target, .selection select:active {
   outline: none;
   border-color: transparent;
+}
+.selection select:disabled {
+  background-color: #F1F4F7;
 }
 @media (min-width: 768px) {
   .selection select {
