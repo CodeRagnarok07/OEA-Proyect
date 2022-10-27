@@ -154,6 +154,11 @@ a.link {
   color: #FFFFFF;
 }
 
+.bg-secondary {
+  background-color: #406AA7;
+  color: #FFFFFF;
+}
+
 .light,
 .bg-light {
   background-color: #F1F4F7;
@@ -166,10 +171,6 @@ a.link {
   background-color: #ECF0F4;
   color: #0B0F22;
   border: 1.5px #ECF0F4 solid;
-}
-
-.text-primary {
-  color: #39619A;
 }
 
 .success,
@@ -416,12 +417,12 @@ textarea:active,
 .selection:active {
   outline: none;
 }
-.input-style.disable, .input-style:disabled,
-input.disable,
+.input-style.disabled, .input-style:disabled,
+input.disabled,
 input:disabled,
-textarea.disable,
+textarea.disabled,
 textarea:disabled,
-.selection.disable,
+.selection.disabled,
 .selection:disabled {
   background-color: #F1F4F7;
   border: 3px solid transparent;
@@ -508,20 +509,21 @@ textarea:disabled,
 .tooltip .tooltip_options {
   position: absolute;
   z-index: 400;
-  top: 120%;
+  top: 100%;
   right: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0.25rem 0;
-  border: 2px #FFFFFF solid;
-  border-radius: 0.5rem;
-  background: #39619A;
-  color: #FFFFFF;
+  border: 2px #CED5DC solid;
+  border-end-end-radius: 0.5rem;
+  border-end-start-radius: 0.5rem;
 }
 @media (min-width: 768px) {
   .tooltip .tooltip_options {
     left: 0;
-    right: auto;
+    right: 0;
   }
 }
 .tooltip .tooltip_options.hidden {
@@ -529,14 +531,12 @@ textarea:disabled,
 }
 .tooltip .tooltip_options .option {
   cursor: pointer;
-  padding: 0.5rem 24px;
+  width: max-content;
+  padding: 18px 23px;
   gap: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.tooltip .tooltip_options .option:hover {
-  background: #406AA7;
 }
 .tooltip .tooltip_options .option > span {
   display: flex;
@@ -579,7 +579,6 @@ textarea:disabled,
 }
 .modal-dashboard .modal-dashboard-content {
   height: 110%;
-  width: 80%;
   overflow: hidden;
   overflow-y: scroll;
   background-color: #FFFFFF;
@@ -638,6 +637,15 @@ body {
 
 .navbar {
   padding: 24px 0px;
+}
+.navbar .right-button {
+  position: absolute;
+  top: -22px;
+  right: 0px;
+  bottom: -25px;
+  left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .footer {

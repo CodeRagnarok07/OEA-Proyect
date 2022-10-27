@@ -170,7 +170,7 @@ textarea,
     &:active {
         outline: none;
     }
-    &.disable,
+    &.disabled,
     &:disabled{
         background-color: v.$light1;
         border: 3px solid transparent;
@@ -283,6 +283,7 @@ textarea,
     position: relative;
     gap: 0.75rem;
     cursor: pointer;
+    
 
     .clicker {
         position: absolute;
@@ -297,12 +298,15 @@ textarea,
 
         position: absolute;
         z-index: 400;
-        top: 120%;
+        top: 100%;
         right: 0;
+        left: 0;
+        width: 100%;
 
         @include responsive(v.$md) {
             left: 0;
-            right: auto;
+            right: 0;
+
 
         }
 
@@ -311,11 +315,10 @@ textarea,
 
 
         padding: 0.25rem 0;
-        border: 2px v.$white solid;
-        border-radius: 0.5rem;
+        border: 2px v.$light3 solid;
+        border-end-end-radius: 0.5rem;
+        border-end-start-radius: 0.5rem;
 
-        background: v.$primary;
-        color: v.$white;
 
 
         &.hidden {
@@ -324,15 +327,14 @@ textarea,
 
         .option {
             cursor: pointer;
-
-            padding: 0.5rem 24px;
+            width: max-content;
+            padding: 18px 23px ;
             gap: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             &:hover {
-                background: v.$secondary;
 
             }
 
@@ -384,9 +386,7 @@ textarea,
     .modal-dashboard-content{
        
         height: 110%;
-        width: 80%;
-
-        overflow: hidden;
+        overflow: hidden;   
         overflow-y: scroll;
         background-color: v.$white;
         padding: 1.5rem;
