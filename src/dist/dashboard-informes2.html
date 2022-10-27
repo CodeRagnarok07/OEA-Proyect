@@ -105,7 +105,8 @@
         <hr>
 
         <div class="main-container dashboard">
-            <aside id="sidebar" class="dashboard-left-bar hidden-modal">
+       
+            <aside id="sidebar" class="dashboard-left-bar hidden">
                 <div class="section-select  ">
                     <a href="" class="btn-section dashboard current">
                         <!-- active -->
@@ -122,7 +123,6 @@
 
                         <p>Inicio</p>
                     </a>
-
                     <a href="" class="btn-section dashboard relative">
                         <!-- active -->
                         <!-- <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,8 +141,6 @@
 
 
                     </a>
-
-
                     <a href="" class="btn-section dashboard ">
                         <!-- active -->
                         <!-- <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,9 +157,6 @@
                         <p>Informes</p>
                     </a>
 
-
-
-
                     <a href="" class="btn-section dashboard ">
                         <!-- active -->
                         <!-- <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,12 +172,9 @@
                         <p>Organización</p>
                     </a>
 
-
-
-
                 </div>
             </aside>
-            <div class="modal hidden-modal modal-util"></div>
+            <div class="modal hidden"></div>
 
             <hr class="separador">
 
@@ -190,7 +182,7 @@
 
                 <div class="time-card bg-light2">
 
-                    <div class="flex justify-between items-center">
+                    <div class="time-card-header">
                         <h3 class="subtitle">Identificación</h3>
 
                         <h5 class="mb-3">
@@ -397,12 +389,11 @@
     </section>
 
 
-    <div class="modal-dashboard flex justify-center items-center" id="indicador-modal">
+    <div class="modal-dashboard py-20 flex justify-center items-center" id="indicador-modal">
 
-        <div class="container  w-full md:max-w-[70%] rounded-[4px] p-9 bg-white ">
+        <div class="container modal-dashboard-content ">
 
-            <div class="modal-dashboard-header flex items-center gap-4">
-
+            <div class="modal-dashboard-header ">
                 <h3 class="">Iniciar Sesión</h3>
                 <div class="tag tag-gray">
                     tipo de indicador
@@ -435,7 +426,6 @@
 
             <form class="form" action="">
                 <div class="row">
-
                     <div class="form-control">
                         <label for="user">valor</label>
                         <input id="user" type="text">
@@ -448,20 +438,62 @@
                 </div>
                 <div class="form-control">
                     <label for="comentarios">Comentarios</label>
-
                     <textarea name="" id="comentarios" cols="30" rows="10"></textarea>
                 </div>
 
                 <hr class="my-9">
+                <div class="mb-3">
+                    <h3 class="uppercase font-medium mb-6">fuente</h3>
+                    <div class="row">
+                        <div class="form-control">
+                            <label class="">
+                                Adjuntar
+                                <div class="relative mt-[6px]">                                    
+                                    <div class="btn absolute inset-0 bg-light ">
+                                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.3125 9.6158L7.90169 16.0266C7.19842 16.7299 6.24459 17.125 5.25002 17.125C4.25546 17.125 3.30162 16.7299 2.59836 16.0266C1.89509 15.3234 1.5 14.3695 1.5 13.375C1.5 12.3804 1.89509 11.4266 2.59836 10.7233L11.715 1.60663C11.9472 1.37452 12.2229 1.19042 12.5263 1.06485C12.8296 0.939272 13.1548 0.874679 13.4831 0.874756C13.8114 0.874833 14.1365 0.93958 14.4399 1.0653C14.7432 1.19102 15.0187 1.37525 15.2509 1.60747C15.483 1.83969 15.6671 2.11535 15.7926 2.41872C15.9182 2.72209 15.9828 3.04722 15.9827 3.37556C15.9827 3.70389 15.9179 4.02899 15.7922 4.3323C15.6665 4.63561 15.4822 4.91119 15.25 5.1433L6.12669 14.2666M6.13419 14.2583L6.12586 14.2666M10.875 5.98247L4.36669 12.4908C4.13779 12.7255 4.01029 13.0408 4.01166 13.3687C4.01303 13.6966 4.14317 14.0108 4.37402 14.2436C4.60488 14.4764 4.91797 14.6092 5.24581 14.6134C5.57366 14.6175 5.89001 14.4927 6.12669 14.2658"
+                                                stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        Seleccionar archivo (Máx. 10MB)
+                                    </div>
+                                    <input class="invisible" type="file">
+                                </div>
+                            </label>
+                        </div>
 
-                <h3>fuente</h3>
 
-                <a href="form_entidad.html" class="btn primary login-submit">Entrar</a>
-                <!-- <input type="submit" value="Entrar" class="btn primary" > -->
+                        <div class="form-control">
+                            <label for="user">valor</label>
+                            <input id="user" type="url">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <hr class="my-6">
+                <div class="flex justify-between">                    
+                    <a href="form_entidad.html" class="btn primary  ">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 8.75L7.5 14.75L16.5 1.25" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Guardar cambios
+                    </a>
+
+                    <div class="space-y-1">
+                        <p>Última edición:</p>
+                        <p>12/09/2022 · 15:43 pm</p>
+                    </div>
+
+                </div>
+
             </form>
 
-            <h5>¿Problemas para acceder? <a class="link">Click aquí</a></h5>
-            <h5>¿Aún no estás registrado? <a class="link">Registrarse</a></h5>
 
         </div>
     </div>

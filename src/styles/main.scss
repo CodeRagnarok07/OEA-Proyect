@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import 'mixins';
-@import 'components';
 @import 'styles';
 @import 'themes';
 @import 'utils';
@@ -19,9 +18,6 @@
 
 }
 
-
-
-
 html,
 body {
     height: 100%;
@@ -33,8 +29,61 @@ body {
 
 }
 
-footer {
+
+.navbar {
+    padding: 24px 0px;
+}
+
+.footer {
     margin-top: auto;
+
+    padding: 24px;
+
+    @include responsive(v.$md) {
+        padding: 48px 0px;
+
+    }
+
+    ;
+
+    .footer-cont {
+
+        @include flex(start, start, column);
+
+        div {
+            &:first-child {
+                margin-bottom: 2.25rem;
+            }
+        }
+
+        .socials {
+            margin-top: 2.25rem;
+
+            @include flex(start, start, row, 2.25rem);
+            flex-wrap: wrap;
+
+
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
+        @include responsive(v.$md) {
+
+            @include flex(space-between, start, row);
+
+            .socials {
+                margin-top: 0px;
+                width: 144px;
+            }
+
+            li {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
 }
 
 
@@ -129,36 +178,217 @@ footer {
     }
 }
 
-/*************** identificacion ***************/
-.bar-progres {
 
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
 
-    div {
-        background: v.$light2;
-        width: 100%;
-        height: 0.5rem;
+// ********* DASHBOARD ELEMENTS ************ //
 
-        &.active {
-            background: v.$primary;
+.header {
 
-        }
+    .title {
+        margin-bottom: 0.75rem;
     }
 
 }
 
+.left-bar {
+    margin-top: 1.5rem;
+
+    @include responsive(v.$md) {
+        margin-top: 0px;
+    }
+
+    .section-select {
+        display: flex;
+        width: auto;
+
+        @include responsive(v.$md) {
+            flex-direction: column;
+            margin-top: 2.25rem;
+            gap: 0.75rem;
+
+            &.section-select {
+                margin-top: 0px;
+
+            }
+
+        }
+    }
+}
+
+.dashboard-left-bar {
+    background-color: v.$white;
+    z-index: 11;
+    top: 6rem;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    padding: 1rem;
 
 
-/*************** Forms ***************/
 
-.nextitem {
-    @include flex(start, center);
+    @include responsive(v.$md) {
+        position: relative;
+        padding: 0px;
+        top: 0px;
+        display: flex;
 
-    @include responsive(v.$md) {}
+        &.hidden-modal {
+            display: flex;
+        }
 
-    // flex flex-col-reverse md:flex-row items-center relative
+    }
+
+    .section-select {
+        display: flex;
+        width: auto;
+
+        flex-direction: column;
+        margin-top: 2.25rem;
+        gap: 0.75rem;
+
+        &.section-select {
+            margin-top: 0px;
+
+        }
+
+    }
+}
+
+
+.btn-section {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: pre-wrap;
+    padding: 18px;
+    gap: 10px;
+
+    &.dashboard {
+        justify-content: start;
+        gap: 1rem;
+
+    }
+
+    @include responsive(v.$md) {
+        padding: 16px 14px;
+        justify-content: space-between;
+        min-width: 233px;
+
+
+    }
+
+    &.current {
+        color: v.$primary;
+        background-color: v.$light2;
+        border-bottom: 2px v.$primary solid;
+
+        p {
+
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+
+        @include responsive(v.$md) {
+            border-bottom: 0px v.$primary solid;
+            border-right: 4px v.$primary solid;
+
+        }
+    }
+
+    &.btn-section-category {
+        width: 100%;
+        border-radius: v.$border-radius-sm;
+        border: 1.5px solid v.$light3;
+        padding: 40px 100px;
+
+        @include flex(center, center, row);
+        gap: 12px;
+
+        @include responsive(v.$md) {
+            @include flex(center, center, column);
+            padding: 78px 100px;
+            gap: 30px;
+        }
+
+        p {
+            min-width: max-content;
+        }
+
+        &:hover {
+            color: v.$primary;
+            background-color: v.$light2;
+        }
+
+    }
+
+
+
+}
+
+.notification {
+    margin-right: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+        content: attr(cont); //contenido por atributo
+        @extend .bg-warning; // tema de colores
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+
+        // padding: 4px 8px;
+
+    }
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+
+
+    @include responsive(v.$md) {
+        margin-top: 4rem;
+        flex-direction: row;
+
+        &.dashboard {
+            margin-top: 2.25rem;
+        }
+
+    }
+
+    main {
+        @include responsive(v.$md) {
+            width: 50%;
+
+            &.dashboard {
+                width: 100%;
+            }
+
+
+        }
+    }
+
+    hr.separador {
+        @include responsive(v.$lg) {
+            border: transparent;
+            width: 150px;
+        }
+    }
+
+
+    // flex flex-col md:flex-row gap-6 md:mt-16
 }
 
 
@@ -193,8 +423,8 @@ footer {
     }
 
     .time-card-icons {
-        margin: 3rem;
         display: flex;
+        margin: 3rem 0rem;
 
         flex-direction: column;
         justify-content: start;
@@ -211,6 +441,7 @@ footer {
             >div {
                 display: flex;
                 flex-direction: column;
+            
             }
 
             h5 {
@@ -226,17 +457,34 @@ footer {
         }
 
         @include responsive(v.$md) {
+            margin: 3rem;
+
             flex-direction: row;
             gap: 0px;
+
             .item-card {
                 flex-direction: column;
                 gap: 0px;
+
                 >div {
                     align-items: center;
                     justify-content: center;
+                    text-align: center;
                 }
             }
 
+        }
+    }
+
+    .time-card-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include responsive(v.$md) {
+            flex-direction: row;
+            align-items: center;
+            // flex flex-col md:flex-row justify-between md:items-center
         }
     }
 }
@@ -248,7 +496,8 @@ footer {
     .progres-bar {
         width: 100%;
         background: rgba(255, 255, 255, 0.2);
-        &.light{
+
+        &.light {
             background: #a5aaae33;
         }
 
@@ -273,23 +522,24 @@ footer {
         border-radius: v.$border-radius-sm;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             background: v.$light2;
             border: 2px solid v.$secondary;
 
         }
 
 
-        &.item-list-inactive{
+        &.item-list-inactive {
             position: relative;
-            ::before{
+
+            ::before {
                 content: "";
                 position: absolute;
                 background: v.$white;
-                @include inset(0,0,0,0);
+                @include inset(0, 0, 0, 0);
                 opacity: 0.2;
             }
-            
+
         }
 
         .item-list-header {
@@ -326,22 +576,5 @@ footer {
     &:active {
         outline: none;
     }
-
-}
-
-
-.modal-dashboard {
-    position: fixed;
-    @include inset(0, 0, 0, 0);
-    height: 100vh;
-    z-index: 25;
-    background: rgba(11, 15, 34, 0.7);
-
-    // @include flex(center, center);
-
-    &.hidden-modal {
-        display: hidden;
-    }
-
 
 }

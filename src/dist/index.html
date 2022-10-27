@@ -41,37 +41,41 @@
         </div>
     </nav>
 
-    <div class="modal hidden-modal">
-        <div class="card card-login ">
-            <button class="light btn-sm btn-close" onclick="handleModal()">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 13L13 1M1 1L13 13" stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+    <div class="modal hidden">
+        <div class="flex-center">
 
-            </button>
+            <div class="card card-login ">
+                <button class="light btn-sm btn-close" onclick="handleModal()">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L13 1M1 1L13 13" stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
 
-            <h2 class="card-login-title">Iniciar Sesión</h2>
+                </button>
 
-            <form class="form" action="">
-                <div class="form-control">
-                    <label for="user">Usuario</label>
-                    <input id="user" type="text">
-                </div>
+                <h2 class="card-login-title">Iniciar Sesión</h2>
 
-                <div class="form-control">
-                    <label for="user">Contraseña</label>
-                    <input id="user" type="password">
-                </div>
+                <form class="form" action="">
+                    <div class="form-control">
+                        <label for="user">Usuario</label>
+                        <input id="user" type="text">
+                    </div>
 
-                <a href="form_entidad.html" class="btn primary login-submit">Entrar</a>
-                <!-- <input type="submit" value="Entrar" class="btn primary" > -->
-            </form>
+                    <div class="form-control">
+                        <label for="user">Contraseña</label>
+                        <input id="user" type="password">
+                    </div>
 
-            <h5>¿Problemas para acceder? <a class="link">Click aquí</a></h5>
-            <h5>¿Aún no estás registrado? <a class="link">Registrarse</a></h5>
+                    <a href="form_entidad.html" class="btn primary login-submit">Entrar</a>
+                    <!-- <input type="submit" value="Entrar" class="btn primary" > -->
+                </form>
 
+                <h5>¿Problemas para acceder? <a class="link">Click aquí</a></h5>
+                <h5>¿Aún no estás registrado? <a class="link">Registrarse</a></h5>
+
+            </div>
         </div>
+
     </div>
 
     <main class="container ">

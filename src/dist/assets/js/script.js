@@ -45,12 +45,12 @@
 // modal
 const modal = document.getElementsByClassName("modal")[0]
 const handleModal = () => {
-    modal.classList.toggle("hidden-modal")
+    modal.classList.toggle("hidden")
 }
 
 const showModal= (query)=>{
     const modal = document.querySelector(query)
-    modal.classList.toggle("hidden-modal")
+    modal.classList.toggle("hidden")
 
 }
 
@@ -63,8 +63,8 @@ const showSidebar = ()=>{
     const modal = document.getElementsByClassName("modal")[0]
     const sidebar = document.getElementById("sidebar")
 
-    modal.classList.toggle("hidden-modal")
-    sidebar.classList.toggle("hidden-modal")
+    modal.classList.toggle("hidden")
+    sidebar.classList.toggle("hidden")
 }
 
 

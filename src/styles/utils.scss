@@ -10,15 +10,75 @@
 
 }
 
+// ******* cards ******** //
 
-.active {
-    background-color: v.$light1;
-    color: v.$primary;
-    border: 1.5px v.$light2 solid;
+.flex-bt {
+    @include flex(space-between, center);
 }
 
-.check {
-    fill: v.$primary;
+.flex-center{
+    @include flex(center, center);      
+
+}
+
+.card-group {
+    display: flex;
+
+    >div {
+        width: 100%;
+    }
+}
+
+.card {
+    position: relative;
+    border-radius: v.$border-radius-md;
+    padding: 1.5rem;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    background-color: v.$white;
+    z-index: 9999;
+
+    &.card-login {
+        padding: 2rem;
+        width: 458px;
+
+        .card-login-title {
+            margin: 0.5rem 0rem 2.25rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+
+        }
+
+        .card-login-helper {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+
+        }
+
+        a.login-submit,
+        input[type="submit"] {
+            margin: 1.25rem 0rem 2.25rem;
+        }
+
+
+    }
+
+
+}
+
+.avatar{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+
+    &.avatar-sm{
+        height: 20px;
+        width: auto;
+
+    }
 }
 
 .subtitle {
@@ -27,12 +87,120 @@
 
 }
 
-.hidden-modal {
-    display: none;
+.item_sumary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: v.$light1;
+    
+    gap: 0.5rem;
+    padding: 1rem 0px;
+
+    @include responsive(v.$md) {
+        padding: 2rem 0px;
+        gap: 1rem;
+    }
 }
 
 
-// 
+
+
+// ******** form and inputs ******** //
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+
+        label {
+            font-weight: 600;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5rem;
+        @include responsive(v.$md) {
+            flex-direction: row;
+        }
+
+    }
+
+    .form-control-group {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5rem;
+
+        @include responsive(v.$lg) {
+            flex-direction: row;
+        }
+    }
+
+}
+
+.input-style,
+input,
+textarea,
+.selection {
+    background-color: transparent;
+    outline: none;
+    border-radius: v.$border-radius-md;
+    padding: 1rem;
+    border: 3px solid v.$light3;
+
+    @include responsive(v.$md) {
+
+        padding: 0.75rem 1rem;
+    }
+
+    ;
+
+    &:hover,
+    &:focus,
+    &:target,
+    &:active {
+        outline: none;
+    }
+
+}
+
+.selection {
+    padding: 0rem;
+    padding-right: 1rem;
+
+    select {
+        padding: 1rem;
+        width: 100%;
+
+        &:hover,
+        &:focus,
+        &:target,
+        &:active {
+            outline: none;
+            border-color: transparent;
+        }
+
+        @include responsive(v.$md) {
+
+            padding: 0.75rem 1rem;
+        }
+
+        ;
+
+    }
+
+}
 
 .form_step {
     display: flex;
@@ -53,29 +221,188 @@
     }
 }
 
-.card-group {
-    display: flex;
+.bar-progres {
 
-    >div {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    div {
+        background: v.$light2;
         width: 100%;
+        height: 0.5rem;
+
+        &.active {
+            background: v.$primary;
+
+        }
     }
+
 }
 
-.item_sumary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: v.$light1;
-    
-    gap: 0.5rem;
-    padding: 1rem 0px;
+.nextitem {
+    @include flex(start, center);
+
+    @include responsive(v.$md) {}
+
+    // flex flex-col-reverse md:flex-row items-center relative
+}
+
+
+
+
+
+/********** Tooltip ************/
+
+.tooltip {
+    position: relative;
+    gap: 0.75rem;
+    cursor: pointer;
+
+    .clicker {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+
+    .tooltip_options {
+
+        position: absolute;
+        z-index: 400;
+        top: 120%;
+        right: 0;
+
+        @include responsive(v.$md) {
+            left: 0;
+            right: auto;
+
+        }
+
+        display: flex;
+        flex-direction: column;
+
+
+        padding: 0.25rem 0;
+        border: 2px v.$white solid;
+        border-radius: 0.5rem;
+
+        background: v.$primary;
+        color: v.$white;
+
+
+        &.hidden {
+            display: none;
+        }
+
+        .option {
+            cursor: pointer;
+
+            padding: 0.5rem 24px;
+            gap: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover {
+                background: v.$secondary;
+
+            }
+
+            >span{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+    }
+
+
+}
+
+
+/*************** Modals ***************/
+
+
+.modal {
+    position: fixed;
+    @include inset(0, 0, 0, 0);
+    height: 100vh;
+    background-color: red;
+    z-index: 10;
+    background: rgba(11, 15, 34, 0.7);
+    padding-top: 4rem;
 
     @include responsive(v.$md) {
-        padding: 2rem 0px;
-        gap: 1rem;
+        padding: 2.25rem;
+
+        &.modal-util {
+            display: hidden;
+            visibility: hidden;
+            position: relative;
+        }
+
     }
+
+
 }
+
+.modal-dashboard {
+    position: fixed;
+    @include inset(0, 0, 0, 0);
+    z-index: 25;
+    background: rgba(11, 15, 34, 0.7);
+    height: 100vh;
+
+    .modal-dashboard-content{
+       
+        height: 110%;
+        width: 80%;
+
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: v.$white;
+        padding: 1.5rem;
+
+        border-radius: 0.25rem;
+        //  mt-10 w-full  rounded-[4px] p-9 bg-white 
+        .modal-dashboard-header{
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            //  flex items-center gap-4 
+        }
+    }
+
+    // @include flex(center, center);
+
+    &.hidden-modal {
+        display: hidden;
+    }
+
+
+}
+
+
+
+
+//********** active ************// 
+
+.active {
+    background-color: v.$light1;
+    color: v.$primary;
+    border: 1.5px v.$light2 solid;
+}
+
+.check {
+    fill: v.$primary;
+}
+
+
 
 .hidden-movil{
     display: hidden;
@@ -84,15 +411,6 @@
     }
 }
 
-.avatar{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 50%;
-
-    &.avatar-sm{
-        height: 20px;
-        width: auto;
-
-    }
+.hidden-util{
+    display: hidden !important;
 }
