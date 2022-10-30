@@ -383,10 +383,15 @@ textarea,
     background-color: red;
     z-index: 10;
     background: rgba(11, 15, 34, 0.7);
-    padding-top: 4rem;
+    padding-top: 10%;
+
+    &.modal-login {
+        z-index: 15;
+
+    }
 
     @include responsive(v.$md) {
-        padding: 2.25rem;
+        
 
         &.modal-util {
             padding: 0rem;

@@ -47,8 +47,8 @@
 
 
 // modal
-const modal = document.getElementsByClassName("modal")[0]
 const handleModal = () => {
+    const modal = document.getElementById("modal_login")
     modal.classList.toggle("hidden")
 }
 

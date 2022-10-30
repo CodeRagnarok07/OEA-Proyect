@@ -571,12 +571,12 @@ textarea:disabled,
   background-color: red;
   z-index: 10;
   background: rgba(11, 15, 34, 0.7);
-  padding-top: 4rem;
+  padding-top: 10%;
+}
+.modal.modal-login {
+  z-index: 15;
 }
 @media (min-width: 768px) {
-  .modal {
-    padding: 2.25rem;
-  }
   .modal.modal-util {
     padding: 0rem;
     display: hidden;
@@ -646,6 +646,7 @@ body {
 
 .navbar {
   padding: 24px 0px;
+  z-index: 11;
 }
 .navbar .nav-button-right {
   position: absolute;
