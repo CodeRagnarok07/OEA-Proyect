@@ -52,6 +52,14 @@ body {
         width: 50%;
         margin-left: -1rem;
     }
+
+    @include responsive(v.$md){
+        .logo{
+            width: 100%;
+            margin-left: 0rem;
+        }
+    
+    }
 }
 
 .footer {

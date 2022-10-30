@@ -501,9 +501,19 @@ textarea:disabled,
 }
 .tooltip.tooltip-responsive > .tooltip_options {
   position: fixed;
-  top: 7.5rem;
   border-end-end-radius: 0rem;
   border-end-start-radius: 0rem;
+  top: 7%;
+}
+@media (min-width: 300px) {
+  .tooltip.tooltip-responsive > .tooltip_options {
+    top: 5.5rem;
+  }
+}
+@media (min-width: 500px) {
+  .tooltip.tooltip-responsive > .tooltip_options {
+    top: 6.5rem;
+  }
 }
 @media (min-width: 768px) {
   .tooltip.tooltip-responsive > .tooltip_options {
@@ -568,14 +578,10 @@ textarea:disabled,
     padding: 2.25rem;
   }
   .modal.modal-util {
+    padding: 0rem;
     display: hidden;
     visibility: hidden;
     position: relative;
-  }
-  .modal.hidden-movil {
-    position: relative;
-    display: hidden !important;
-    visibility: hidden;
   }
 }
 
@@ -662,6 +668,12 @@ body {
 .navbar .logo {
   width: 50%;
   margin-left: -1rem;
+}
+@media (min-width: 768px) {
+  .navbar .logo {
+    width: 100%;
+    margin-left: 0rem;
+  }
 }
 
 .footer {

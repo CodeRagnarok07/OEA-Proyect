@@ -291,10 +291,22 @@ textarea,
 
     &.tooltip-responsive {
         >.tooltip_options {
+
+
+
             position: fixed;
-            top: 7.5rem;
             border-end-end-radius: 0rem;
             border-end-start-radius: 0rem;
+            top: 7%;
+
+            @include responsive(300px) {
+                top: 5.5rem;
+            }
+
+            @include responsive(500px) {
+                top: 6.5rem;
+            }
+
 
             @include responsive(v.$md) {
                 position: absolute;
@@ -377,18 +389,14 @@ textarea,
         padding: 2.25rem;
 
         &.modal-util {
+            padding: 0rem;
+
             display: hidden;
             visibility: hidden;
             position: relative;
         }
 
-        &.hidden-movil {
-            // display: flex;
-            position: relative;
-
-            display: hidden !important;
-            visibility: hidden;
-        }
+  
     }
 
 
