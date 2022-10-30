@@ -454,7 +454,7 @@ textarea:disabled,
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   z-index: 10;
-  --grid:1;
+  --grid: 1;
   --g: 5px;
   display: grid;
   grid-auto-flow: column;
@@ -499,6 +499,20 @@ textarea:disabled,
   gap: 0.75rem;
   cursor: pointer;
 }
+.tooltip.tooltip-responsive > .tooltip_options {
+  position: fixed;
+  top: 7.5rem;
+  border-end-end-radius: 0rem;
+  border-end-start-radius: 0rem;
+}
+@media (min-width: 768px) {
+  .tooltip.tooltip-responsive > .tooltip_options {
+    position: absolute;
+    top: 100%;
+    border-end-end-radius: 0.5rem;
+    border-end-start-radius: 0.5rem;
+  }
+}
 .tooltip .clicker {
   position: absolute;
   top: 0px;
@@ -507,8 +521,8 @@ textarea:disabled,
   left: 0px;
 }
 .tooltip .tooltip_options {
-  position: absolute;
   z-index: 400;
+  position: absolute;
   top: 100%;
   right: 0;
   left: 0;
@@ -520,22 +534,15 @@ textarea:disabled,
   border-end-end-radius: 0.5rem;
   border-end-start-radius: 0.5rem;
 }
-@media (min-width: 768px) {
-  .tooltip .tooltip_options {
-    left: 0;
-    right: 0;
-  }
-}
 .tooltip .tooltip_options.hidden {
   display: none;
 }
 .tooltip .tooltip_options .option {
   cursor: pointer;
-  width: max-content;
+  width: 100%;
   padding: 18px 23px;
   gap: 12px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .tooltip .tooltip_options .option > span {
@@ -564,6 +571,11 @@ textarea:disabled,
     display: hidden;
     visibility: hidden;
     position: relative;
+  }
+  .modal.hidden-movil {
+    position: relative;
+    display: hidden !important;
+    visibility: hidden;
   }
 }
 
@@ -605,15 +617,6 @@ textarea:disabled,
   fill: #39619A;
 }
 
-.hidden-movil {
-  display: hidden;
-}
-@media (min-width: 768px) {
-  .hidden-movil {
-    display: flex;
-  }
-}
-
 .hidden-util {
   display: hidden !important;
 }
@@ -638,14 +641,27 @@ body {
 .navbar {
   padding: 24px 0px;
 }
-.navbar .right-button {
+.navbar .nav-button-right {
   position: absolute;
-  top: -22px;
+  top: -23px;
   right: 0px;
-  bottom: -25px;
+  bottom: -24px;
   left: auto;
   display: flex;
   align-items: center;
+}
+.navbar .nav-button-left {
+  position: absolute;
+  top: -23px;
+  right: auto;
+  bottom: -24px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+}
+.navbar .logo {
+  width: 50%;
+  margin-left: -1rem;
 }
 
 .footer {
@@ -803,7 +819,7 @@ body {
 .dashboard-left-bar {
   background-color: #FFFFFF;
   z-index: 11;
-  top: 6rem;
+  top: 7.5rem;
   position: fixed;
   left: 0px;
   right: 0px;

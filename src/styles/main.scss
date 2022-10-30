@@ -33,12 +33,24 @@ body {
 .navbar {
     padding: 24px 0px;
 
-    .right-button{
+    .nav-button-right{
         position: absolute;
-        @include inset(-22px, 0px, -25px, auto);
+        @include inset(-23px, 0px, -24px, auto);
         display: flex;
         align-items: center;
         // absolute  right-0  -top-[22px] -bottom-[25px]  flex items-center
+    }
+    .nav-button-left{
+        position: absolute;
+        @include inset(-23px, auto, -24px, 0px);
+        display: flex;
+        align-items: center;
+        // absolute  right-0  -top-[22px] -bottom-[25px]  flex items-center
+    }
+
+    .logo{
+        width: 50%;
+        margin-left: -1rem;
     }
 }
 
@@ -226,13 +238,11 @@ body {
 .dashboard-left-bar {
     background-color: v.$white;
     z-index: 11;
-    top: 6rem;
+    top: 7.5rem;
     position: fixed;
     left: 0px;
     right: 0px;
     padding: 1rem;
-
-
 
     @include responsive(v.$md) {
         position: relative;

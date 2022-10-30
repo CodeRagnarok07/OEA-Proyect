@@ -28,9 +28,13 @@
 
 
         const activador = () => {
+            parent.parentElement.classList.toggle("bg-secondary")
             tooltip.classList.toggle("hidden")
             svg_icons.children[0].classList.toggle("hidden")
             svg_icons.children[1].classList.toggle("hidden")
+
+            const modal = document.getElementsByClassName("modal")[0]
+            modal.classList.toggle("hidden")
         }
 
         clicker.onclick = () => activador()
@@ -49,22 +53,24 @@ const handleModal = () => {
 }
 
 const showModal= (query)=>{
+
     const modal = document.querySelector(query)
     modal.classList.toggle("hidden")
-
 }
 
 
 
 // form by step
 
-const showSidebar = ()=>{
+const showSidebar = (e)=>{
 
     const modal = document.getElementsByClassName("modal")[0]
+    modal.classList.toggle("hidden")
     const sidebar = document.getElementById("sidebar")
 
-    modal.classList.toggle("hidden")
     sidebar.classList.toggle("hidden")
+    e.classList.toggle("bg-secondary")
+
 }
 
 
