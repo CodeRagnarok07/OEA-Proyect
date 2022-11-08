@@ -144,7 +144,10 @@ button,
         padding: 12px;
     }
 
-
+    &.no-border{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
     // type
 

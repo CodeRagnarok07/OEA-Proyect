@@ -130,6 +130,11 @@ button.btn-sm,
 .btn.btn-sm {
   padding: 12px;
 }
+button.no-border,
+.btn.no-border {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 button.btn-close,
 .btn.btn-close {
   margin-left: auto;
