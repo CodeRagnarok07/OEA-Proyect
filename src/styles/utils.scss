@@ -216,6 +216,27 @@ textarea,
 
 }
 
+.buscador {
+    background-color: transparent;
+    outline: none;
+    border-radius: v.$border-radius-md;
+    padding: 0rem 1rem;
+
+    border: 3px solid v.$light3;
+    display: flex;
+    align-items: center;
+
+    input {
+        background-color: transparent;
+        outline: none;
+        border-radius: 0px;
+        padding: 1rem;
+
+        border: none;
+
+    }
+}
+
 
 .form_step {
     overflow: hidden;
@@ -374,6 +395,43 @@ textarea,
 }
 
 
+
+
+.toggle-list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: v.$gray2;
+
+
+    .item-toggle-list{
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    ul{
+        margin-left: 24px;
+        li{
+            @extend .item-toggle-list;
+
+            .editar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: v.$primary;
+                text-transform: uppercase;
+                cursor: pointer;
+                svg{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
 /*************** Modals ***************/
 
 
@@ -392,7 +450,7 @@ textarea,
     }
 
     @include responsive(v.$md) {
-        
+
 
         &.modal-util {
             padding: 0rem;
@@ -402,7 +460,7 @@ textarea,
             position: relative;
         }
 
-  
+
     }
 
 

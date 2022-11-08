@@ -449,6 +449,23 @@ textarea:disabled,
   }
 }
 
+.buscador {
+  background-color: transparent;
+  outline: none;
+  border-radius: 0.25rem;
+  padding: 0rem 1rem;
+  border: 3px solid #CED5DC;
+  display: flex;
+  align-items: center;
+}
+.buscador input {
+  background-color: transparent;
+  outline: none;
+  border-radius: 0px;
+  padding: 1rem;
+  border: none;
+}
+
 .form_step {
   overflow: hidden;
   scroll-behavior: smooth;
@@ -558,6 +575,34 @@ textarea:disabled,
 .tooltip .tooltip_options .option > span {
   display: flex;
   align-items: center;
+}
+
+.toggle-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #ECF0F4;
+}
+.toggle-list .item-toggle-list, .toggle-list ul li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toggle-list ul {
+  margin-left: 24px;
+}
+.toggle-list ul li .editar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #39619A;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle-list ul li .editar svg {
+  margin-right: 10px;
 }
 
 /*************** Modals ***************/

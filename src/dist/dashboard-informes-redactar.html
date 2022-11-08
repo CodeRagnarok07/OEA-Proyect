@@ -14,14 +14,12 @@
 
 <body class="">
 
-    <nav class="navbar font-sm bg-primary z-[11]">
-
-
+    <nav class="navbar font-sm bg-primary">
         <div class="container flex-bt">
 
-            <div class="w-max">
+            <div class="w-max md:hidden">
                 <div class="nav-button-left cursor-pointer px-5" onclick="showSidebar(this)">
-                    <div class="md:hidden ">
+                    <div class=" ">
                         <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.75 0.75H17.25M0.75 6H17.25M0.75 11.25H17.25" stroke="white" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -86,9 +84,8 @@
     <!-- modal for navbar -->
     <div class="modal hidden modal-util"></div>
 
+
     <section class="container mt-12 mb-20">
-
-
         <header class="header mb-6">
             <div class="navigator">
                 <h5>Inicio</h5>
@@ -125,18 +122,18 @@
 
             <aside id="sidebar" class="dashboard-left-bar hidden">
                 <div class="section-select  ">
-                    <a href="" class="btn-section dashboard current">
+                    <a href="" class="btn-section dashboard ">
                         <!-- active -->
-                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9 0.431932L17.159 8.59093C17.189 8.62093 17.219 8.64893 17.25 8.67693V14.8749C17.25 15.9099 16.41 16.7499 15.375 16.7499H12C11.8011 16.7499 11.6103 16.6709 11.4697 16.5303C11.329 16.3896 11.25 16.1988 11.25 15.9999V11.4999C11.25 11.301 11.171 11.1103 11.0303 10.9696C10.8897 10.8289 10.6989 10.7499 10.5 10.7499H7.5C7.30109 10.7499 7.11032 10.8289 6.96967 10.9696C6.82902 11.1103 6.75 11.301 6.75 11.4999V15.9999C6.75 16.1988 6.67098 16.3896 6.53033 16.5303C6.38968 16.6709 6.19891 16.7499 6 16.7499H2.625C2.12772 16.7499 1.65081 16.5524 1.29917 16.2008C0.947544 15.8491 0.75 15.3722 0.75 14.8749V8.67693C0.781111 8.6491 0.811456 8.62042 0.841 8.59093L9 0.429932V0.431932Z"
                                 fill="#39619A" />
-                        </svg>
+                        </svg> -->
 
                         <!-- inactive -->
-                        <!-- <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.25 11L10.204 2.04504C10.4151 1.8343 10.7012 1.71594 10.9995 1.71594C11.2978 1.71594 11.5839 1.8343 11.795 2.04504L20.75 11M3.5 8.75004V18.875C3.5 19.496 4.004 20 4.625 20H8.75V15.125C8.75 14.504 9.254 14 9.875 14H12.125C12.746 14 13.25 14.504 13.25 15.125V20H17.375C17.996 20 18.5 19.496 18.5 18.875V8.75004M7.25 20H15.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                         -->
+                        </svg>                        
 
                         <p>Inicio</p>
                     </a>
@@ -158,18 +155,20 @@
 
 
                     </a>
-                    <a href="" class="btn-section dashboard ">
+                    <a href="" class="btn-section dashboard current">
                         <!-- active -->
-                        <!-- <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 0.5C1.589 0.5 0.75 1.34 0.75 2.375V19.625C0.75 20.66 1.59 21.5 2.625 21.5H15.375C16.41 21.5 17.25 20.66 17.25 19.625V11.75C17.25 10.7554 16.8549 9.80161 16.1517 9.09835C15.4484 8.39509 14.4946 8 13.5 8H11.625C11.1277 8 10.6508 7.80246 10.2992 7.45083C9.94754 7.0992 9.75 6.62228 9.75 6.125V4.25C9.75 3.25544 9.35491 2.30161 8.65165 1.59835C7.94839 0.895088 6.99456 0.5 6 0.5H2.625ZM4.5 14C4.5 13.8011 4.57902 13.6103 4.71967 13.4697C4.86032 13.329 5.05109 13.25 5.25 13.25H12.75C12.9489 13.25 13.1397 13.329 13.2803 13.4697C13.421 13.6103 13.5 13.8011 13.5 14C13.5 14.1989 13.421 14.3897 13.2803 14.5303C13.1397 14.671 12.9489 14.75 12.75 14.75H5.25C5.05109 14.75 4.86032 14.671 4.71967 14.5303C4.57902 14.3897 4.5 14.1989 4.5 14ZM5.25 16.25C5.05109 16.25 4.86032 16.329 4.71967 16.4697C4.57902 16.6103 4.5 16.8011 4.5 17C4.5 17.1989 4.57902 17.3897 4.71967 17.5303C4.86032 17.671 5.05109 17.75 5.25 17.75H9C9.19891 17.75 9.38968 17.671 9.53033 17.5303C9.67098 17.3897 9.75 17.1989 9.75 17C9.75 16.8011 9.67098 16.6103 9.53033 16.4697C9.38968 16.329 9.19891 16.25 9 16.25H5.25Z" fill="#39619A"/>
-                        </svg>-->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.625 1.5C4.589 1.5 3.75 2.34 3.75 3.375V20.625C3.75 21.66 4.59 22.5 5.625 22.5H18.375C19.41 22.5 20.25 21.66 20.25 20.625V12.75C20.25 11.7554 19.8549 10.8016 19.1517 10.0983C18.4484 9.39509 17.4946 9 16.5 9H14.625C14.1277 9 13.6508 8.80246 13.2992 8.45083C12.9475 8.0992 12.75 7.62228 12.75 7.125V5.25C12.75 4.25544 12.3549 3.30161 11.6517 2.59835C10.9484 1.89509 9.99456 1.5 9 1.5H5.625ZM7.5 15C7.5 14.8011 7.57902 14.6103 7.71967 14.4697C7.86032 14.329 8.05109 14.25 8.25 14.25H15.75C15.9489 14.25 16.1397 14.329 16.2803 14.4697C16.421 14.6103 16.5 14.8011 16.5 15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H8.25C8.05109 15.75 7.86032 15.671 7.71967 15.5303C7.57902 15.3897 7.5 15.1989 7.5 15ZM8.25 17.25C8.05109 17.25 7.86032 17.329 7.71967 17.4697C7.57902 17.6103 7.5 17.8011 7.5 18C7.5 18.1989 7.57902 18.3897 7.71967 18.5303C7.86032 18.671 8.05109 18.75 8.25 18.75H12C12.1989 18.75 12.3897 18.671 12.5303 18.5303C12.671 18.3897 12.75 18.1989 12.75 18C12.75 17.8011 12.671 17.6103 12.5303 17.4697C12.3897 17.329 12.1989 17.25 12 17.25H8.25Z" fill="#39619A"/>
+                            <path d="M12.9707 1.81592C13.7972 2.76888 14.2515 3.98846 14.2497 5.24992V7.12492C14.2497 7.33192 14.4177 7.49992 14.6247 7.49992H16.4997C17.7612 7.49817 18.9807 7.9524 19.9337 8.77892C19.4937 7.10563 18.6172 5.57922 17.3938 4.3558C16.1704 3.13239 14.644 2.25588 12.9707 1.81592Z" fill="#39619A"/>
+                            </svg>
+                            
 
                         <!-- inactive -->
-                        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M16.5 13.25V10.625C16.5 9.72989 16.1444 8.87145 15.5115 8.23851C14.8786 7.60558 14.0201 7.25 13.125 7.25H11.625C11.3266 7.25 11.0405 7.13147 10.8295 6.9205C10.6185 6.70952 10.5 6.42337 10.5 6.125V4.625C10.5 3.72989 10.1444 2.87145 9.51149 2.23851C8.87855 1.60558 8.02011 1.25 7.125 1.25H5.25M5.25 14H12.75M5.25 17H9M7.5 1.25H2.625C2.004 1.25 1.5 1.754 1.5 2.375V19.625C1.5 20.246 2.004 20.75 2.625 20.75H15.375C15.996 20.75 16.5 20.246 16.5 19.625V10.25C16.5 7.86305 15.5518 5.57387 13.864 3.88604C12.1761 2.19821 9.88695 1.25 7.5 1.25V1.25Z"
                                 stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        </svg> -->
 
                         <p>Informes</p>
                     </a>
@@ -196,197 +195,125 @@
             <hr class="separador">
 
             <main class="dashboard">
-                <div class="time-card bg-primary ">
+                <div class="flex mb-7">
 
-                    <div class="time-card-header">
-                        <h3 class="subtitle">Identificación</h3>
-
-                        <h5 class="mb-3">
-                            Última edición: 12/09/2022 · 15:43 pm
-                        </h5>
-
-
-                    </div>
-
-
-                    <div class="progres mt-3 ">
-
-                        <div class="progres-bar ">
-                            <div class="cont-progres-bar bg-white" style="width: 50%;"> </div>
-                        </div>
-
-                        <h3 class="font-bold">28%</h3>
-                    </div>
-
-                    <div class="time-card-icons ">
-
-                        <!-- item1 -->
-                        <div class="item-card">
-                            <svg width="27" height="36" viewBox="0 0 27 36" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M26 21.75V17.375C26 15.8832 25.4074 14.4524 24.3525 13.3975C23.2976 12.3426 21.8668 11.75 20.375 11.75H17.875C17.3777 11.75 16.9008 11.5525 16.5492 11.2008C16.1975 10.8492 16 10.3723 16 9.875V7.375C16 5.88316 15.4074 4.45242 14.3525 3.39752C13.2976 2.34263 11.8668 1.75 10.375 1.75H7.25M7.25 23H19.75M7.25 28H13.5M11 1.75H2.875C1.84 1.75 1 2.59 1 3.625V32.375C1 33.41 1.84 34.25 2.875 34.25H24.125C25.16 34.25 26 33.41 26 32.375V16.75C26 12.7718 24.4196 8.95644 21.6066 6.1434C18.7936 3.33035 14.9782 1.75 11 1.75V1.75Z"
-                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <div>
-                                <h5 class="">Nombre</h5>
-                                <p class="">Informe paraguay 2023</p>
-                            </div>
-                        </div>
-
-                        <!-- item2 -->
-                        <div class="item-card">
-                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.5 31C19.825 30.9998 23.0558 29.8953 25.6851 27.86C28.3143 25.8247 30.1932 22.9738 31.0267 19.755M16.5 31C13.175 30.9998 9.94424 29.8953 7.31496 27.86C4.68568 25.8247 2.8068 22.9738 1.97334 19.755M16.5 31C20.6417 31 24 24.2833 24 16C24 7.71667 20.6417 1 16.5 1M16.5 31C12.3583 31 9.00001 24.2833 9.00001 16C9.00001 7.71667 12.3583 1 16.5 1M16.5 1C19.1604 0.998891 21.7732 1.7056 24.0703 3.04761C26.3674 4.38962 28.2662 6.31861 29.5717 8.63667M16.5 1C13.8396 0.998891 11.2268 1.7056 8.92969 3.04761C6.63257 4.38962 4.73385 6.31861 3.42834 8.63667M29.5717 8.63667C25.9428 11.7799 21.3009 13.5069 16.5 13.5C11.5033 13.5 6.93334 11.6667 3.42834 8.63667M29.5717 8.63667C30.8398 10.8833 31.5041 13.4202 31.5 16C31.5 17.2967 31.335 18.555 31.0267 19.755M31.0267 19.755C26.582 22.219 21.582 23.508 16.5 23.5C11.418 23.5079 6.41808 22.2189 1.97334 19.755M1.97334 19.755C1.65792 18.5283 1.49888 17.2666 1.50001 16C1.50001 13.325 2.20001 10.8117 3.42834 8.63667"
-                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <div>
-                                <h5 class="">Convención</h5>
-                                <p class="">CIADDIS</p>
-                            </div>
-                        </div>
-
-                        <!-- item3 -->
-                        <div class="item-card">
-                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.75 1V4.75M25.25 1V4.75M1.5 27.25V8.5C1.5 7.50544 1.89509 6.55161 2.59835 5.84835C3.30161 5.14509 4.25544 4.75 5.25 4.75H27.75C28.7446 4.75 29.6984 5.14509 30.4016 5.84835C31.1049 6.55161 31.5 7.50544 31.5 8.5V27.25M1.5 27.25C1.5 28.2446 1.89509 29.1984 2.59835 29.9016C3.30161 30.6049 4.25544 31 5.25 31H27.75C28.7446 31 29.6984 30.6049 30.4016 29.9016C31.1049 29.1984 31.5 28.2446 31.5 27.25M1.5 27.25V14.75C1.5 13.7554 1.89509 12.8016 2.59835 12.0983C3.30161 11.3951 4.25544 11 5.25 11H27.75C28.7446 11 29.6984 11.3951 30.4016 12.0983C31.1049 12.8016 31.5 13.7554 31.5 14.75V27.25M16.5 17.25H16.5133V17.2633H16.5V17.25ZM16.5 21H16.5133V21.0133H16.5V21ZM16.5 24.75H16.5133V24.7633H16.5V24.75ZM12.75 21H12.7633V21.0133H12.75V21ZM12.75 24.75H12.7633V24.7633H12.75V24.75ZM9 21H9.01333V21.0133H9V21ZM9 24.75H9.01333V24.7633H9V24.75ZM20.25 17.25H20.2633V17.2633H20.25V17.25ZM20.25 21H20.2633V21.0133H20.25V21ZM20.25 24.75H20.2633V24.7633H20.25V24.75ZM24 17.25H24.0133V17.2633H24V17.25ZM24 21H24.0133V21.0133H24V21Z"
-                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <div>
-                                <h5 class="">Etapa</h5>
-                                <p class="">PREPARACIÓN</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="bg-white relative w-full">
-                        Ver detalle
-
-                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8H16M16 8L9.25 1.25M16 8L9.25 14.75" stroke="#39619A" stroke-width="1.5"
+                    <a href="./dashboard-informes2.html" class=" btn text-primary ">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 8H1.5M1.5 8L8.25 14.75M1.5 8L8.25 1.25" stroke="#39619A" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-
-                    </button>
+                        Volver atrás
+                    </a>
                 </div>
 
+                <h3 class="subtitle">Informe 2023</h3>
 
-                <div class="my-16">
-                    <h2 class="uppercase mb-4">resumen</h2>
+                <!-- bucador -->
+                <form action="" class="form" id="">
+                    <label class="buscador">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.7656 14.6895L10.6934 9.61719C11.4805 8.59961 11.9062 7.35547 11.9062 6.04688C11.9062 4.48047 11.2949 3.01172 10.1895 1.9043C9.08398 0.796875 7.61133 0.1875 6.04688 0.1875C4.48242 0.1875 3.00977 0.798828 1.9043 1.9043C0.796875 3.00977 0.1875 4.48047 0.1875 6.04688C0.1875 7.61133 0.798828 9.08398 1.9043 10.1895C3.00977 11.2969 4.48047 11.9062 6.04688 11.9062C7.35547 11.9062 8.59766 11.4805 9.61523 10.6953L14.6875 15.7656C14.7024 15.7805 14.72 15.7923 14.7395 15.8004C14.7589 15.8084 14.7797 15.8126 14.8008 15.8126C14.8218 15.8126 14.8427 15.8084 14.8621 15.8004C14.8815 15.7923 14.8992 15.7805 14.9141 15.7656L15.7656 14.916C15.7805 14.9011 15.7923 14.8835 15.8004 14.864C15.8084 14.8446 15.8126 14.8238 15.8126 14.8027C15.8126 14.7817 15.8084 14.7609 15.8004 14.7414C15.7923 14.722 15.7805 14.7043 15.7656 14.6895ZM9.14062 9.14062C8.3125 9.9668 7.21484 10.4219 6.04688 10.4219C4.87891 10.4219 3.78125 9.9668 2.95312 9.14062C2.12695 8.3125 1.67188 7.21484 1.67188 6.04688C1.67188 4.87891 2.12695 3.7793 2.95312 2.95312C3.78125 2.12695 4.87891 1.67188 6.04688 1.67188C7.21484 1.67188 8.31445 2.125 9.14062 2.95312C9.9668 3.78125 10.4219 4.87891 10.4219 6.04688C10.4219 7.21484 9.9668 8.31445 9.14062 9.14062Z"
+                                fill="#D2D5DC" />
+                        </svg>
 
-                    <div class="card-group gap-3">
+                        <input class="" id="o_name" type="text">
+                    </label>
+                </form>
 
-                        <!-- item1 -->
-                        <div class="item_sumary">
-                            <h1>7</h1>
-                            <p>Completados</p>
-                        </div>
-                        <!-- item1 -->
-                        <div class="item_sumary">
-                            <h1>7</h1>
-                            <p>Completados</p>
-                        </div>
-                        <!-- item1 -->
-                        <div class="item_sumary">
-                            <h1>7</h1>
-                            <p>Completados</p>
-                        </div>
+                <!-- list -->
+                <div class="mt-3">
 
+                    <div class="toggle-list">
+                        <div class="item-toggle-list cursor-pointer">Encabezado</div>
+                        <ul>
+                            <li>Sub-item 1
+                                <div class="editar space-x-0">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.862 3.487L18.5 6.125M15.862 3.487L17.549 1.799C17.9007 1.44733 18.3777 1.24976 18.875 1.24976C19.3723 1.24976 19.8493 1.44733 20.201 1.799C20.5527 2.15068 20.7502 2.62766 20.7502 3.125C20.7502 3.62235 20.5527 4.09933 20.201 4.451L5.832 18.82C5.30332 19.3484 4.65137 19.7367 3.935 19.95L1.25 20.75L2.05 18.065C2.26328 17.3486 2.65163 16.6967 3.18 16.168L15.863 3.487H15.862Z"
+                                            stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Editar
+                                </div>
+                            </li>
+                            <li>Sub-item 1
+                                <div class="editar space-x-0">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.862 3.487L18.5 6.125M15.862 3.487L17.549 1.799C17.9007 1.44733 18.3777 1.24976 18.875 1.24976C19.3723 1.24976 19.8493 1.44733 20.201 1.799C20.5527 2.15068 20.7502 2.62766 20.7502 3.125C20.7502 3.62235 20.5527 4.09933 20.201 4.451L5.832 18.82C5.30332 19.3484 4.65137 19.7367 3.935 19.95L1.25 20.75L2.05 18.065C2.26328 17.3486 2.65163 16.6967 3.18 16.168L15.863 3.487H15.862Z"
+                                            stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Editar
+                                </div>
+                            </li>
+
+                            <li>Sub-item 1
+                                <div class="editar space-x-0">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.862 3.487L18.5 6.125M15.862 3.487L17.549 1.799C17.9007 1.44733 18.3777 1.24976 18.875 1.24976C19.3723 1.24976 19.8493 1.44733 20.201 1.799C20.5527 2.15068 20.7502 2.62766 20.7502 3.125C20.7502 3.62235 20.5527 4.09933 20.201 4.451L5.832 18.82C5.30332 19.3484 4.65137 19.7367 3.935 19.95L1.25 20.75L2.05 18.065C2.26328 17.3486 2.65163 16.6967 3.18 16.168L15.863 3.487H15.862Z"
+                                            stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Editar
+                                </div>
+                            </li>
+
+
+                        </ul>
                     </div>
+                    <div class="toggle-list ">
+                        <div class="item-toggle-list cursor-pointer">Encabezado</div>
+                        <ul>
+                            <li>Sub-item 1
+                                <div class="editar space-x-0">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.862 3.487L18.5 6.125M15.862 3.487L17.549 1.799C17.9007 1.44733 18.3777 1.24976 18.875 1.24976C19.3723 1.24976 19.8493 1.44733 20.201 1.799C20.5527 2.15068 20.7502 2.62766 20.7502 3.125C20.7502 3.62235 20.5527 4.09933 20.201 4.451L5.832 18.82C5.30332 19.3484 4.65137 19.7367 3.935 19.95L1.25 20.75L2.05 18.065C2.26328 17.3486 2.65163 16.6967 3.18 16.168L15.863 3.487H15.862Z"
+                                            stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Editar
+                                </div>
+                            </li>
+                            <li>Sub-item 1
+                                <div class="editar space-x-0">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.862 3.487L18.5 6.125M15.862 3.487L17.549 1.799C17.9007 1.44733 18.3777 1.24976 18.875 1.24976C19.3723 1.24976 19.8493 1.44733 20.201 1.799C20.5527 2.15068 20.7502 2.62766 20.7502 3.125C20.7502 3.62235 20.5527 4.09933 20.201 4.451L5.832 18.82C5.30332 19.3484 4.65137 19.7367 3.935 19.95L1.25 20.75L2.05 18.065C2.26328 17.3486 2.65163 16.6967 3.18 16.168L15.863 3.487H15.862Z"
+                                            stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Editar
+                                </div>
+                            </li>
+
+                            <li>Sub-item 1
+                                <div class="editar space-x-0">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.862 3.487L18.5 6.125M15.862 3.487L17.549 1.799C17.9007 1.44733 18.3777 1.24976 18.875 1.24976C19.3723 1.24976 19.8493 1.44733 20.201 1.799C20.5527 2.15068 20.7502 2.62766 20.7502 3.125C20.7502 3.62235 20.5527 4.09933 20.201 4.451L5.832 18.82C5.30332 19.3484 4.65137 19.7367 3.935 19.95L1.25 20.75L2.05 18.065C2.26328 17.3486 2.65163 16.6967 3.18 16.168L15.863 3.487H15.862Z"
+                                            stroke="#39619A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Editar
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
                 </div>
-
-                <section class="mt-16">
-                    <h3 class="uppercase mb-4">Últimos editados</h3>
-
-                    <div class="list-dashboard">
-
-                        <!-- item 1 -->
-                        <div class="item-list">
-
-                            <div class="item-list-header">
-
-                                <h3>Informe 2022</h3>
-
-                                <div class="tag tag-red">
-                                    PENDIENTE
-                                </div>
-
-                            </div>
-
-                            <p class="mt-[17px] mb-[20px]">
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam
-                            </p>
-
-                            <div class="flex justify-between ">
-                                <small>12/09/2022 · 15:43 pm</small>
-                                <small class="text-primary">
-                                    Por: Elena Miranda
-                                </small>
-                            </div>
-
-                        </div>
-
-                        <!-- item 2 -->
-                        <div class="item-list">
-
-                            <div class="item-list-header">
-
-                                <h3>Informe 2022</h3>
-
-                                <div class="tag tag-orange">
-                                    EN EVALUACIÓN
-                                </div>
-
-                            </div>
-
-                            <p class="mt-[17px] mb-[20px]">
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam
-                            </p>
-
-                            <div class="flex justify-between ">
-                                <small>12/09/2022 · 15:43 pm</small>
-                                <small class="text-primary">
-                                    Por: Elena Miranda
-                                </small>
-                            </div>
-
-                        </div>
-
-
-                        <!-- item 3 -->
-                        <div class="item-list">
-
-                            <div class="item-list-header">
-
-                                <h3>Informe 2022</h3>
-
-                                <div class="tag tag-green">
-                                    APROBADO
-                                </div>
-
-                            </div>
-
-                            <p class="mt-[17px] mb-[20px]">
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam
-                            </p>
-
-                            <div class="flex justify-between ">
-                                <small>12/09/2022 · 15:43 pm</small>
-                                <small class="text-primary">
-                                    Por: Elena Miranda
-                                </small>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </section>
 
 
 
@@ -396,164 +323,7 @@
 
     </section>
 
-    <div class="modal-dashboard py-20 flex justify-center items-center hidden" id="user-form-modal">
 
-        <div class="modal-dashboard-content w-[80%] md:w-[929px] ">
-            <div class="modal-dashboard-header ">
-
-                <h3 class="uppercase">ajustes de cuenta</h3>
-
-                <div class="ml-auto">
-                    <div class="btn light btn-sm btn-close" onclick="showModal('#user-form-modal')">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 13L13 1M1 1L13 13" stroke="#0B0F22" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <form class="form">
-
-                <div class="w-full flex justify-center">
-
-                    <div class="h-40 w-auto rounded-full relative">
-                        <img class="avatar"
-                            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPDxIOEBAODw8PEBAPEhAODQ8NEQ8PFREWFhURFRMYHSggGBolGxMTITEhJSkrLi4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAABQQBAwIH/8QANRABAAEBBAcHAwIHAQAAAAAAAAECAwQRIQUSMUFRYXEigZGhscHRMjPhQvBScoKSorLxI//EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD9RAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB52ttTTtmI5b/AAB6Cfa6Qn9MYc5z8mWu2qq21TPfl4AszJihALwhRMxsmY6S9aLzXGyqe+cfUFgYLG/7q474+G6J3g6AAAAAAAAAAAAAAAAAADBpC3/RH9XwDl5vu6j+74YpkAAAAAAAGuwvurTFOrjhv1sN/RkAb40jxo/yx9myztIqjWjZKI1XC21atWdlXlO4FMAAAAAAAAAAAAAAAHKpwjHhGKJXVjMzO2ZxVr5OFnV0w8ZwSAAAAAAAAAAAAAWbCvWpirjHnvejLo2rsYcKp9pagAAAAAAAAAAAAAAZ7/8AbnrHqlKmkPtz1j1SwAAAAAAAAAAAAb9FzlVHOJ9fhuT9GTnV0hQAAAAAAAAAAAAAABnv8f8AnPWPVKWbejWpmnjHnuRgAAAAAAAAAAAAbNGfVV0j1UWLRlOVU8ZiPD/raAAAAAAAAAAAAAAD4tbSKYxmcISrzMTXM05xOfy2aT+mP5vZOABwHQAAAAAB3049z5B12iiapwjOZccBbsbPUpinh5y+2e41TNnGO7GGgAAAAAAAAAAAAAAGbSFONGPCYn290tbtKNaJp4xMIkwA+f35PpwAAByPy6AfgAHPnB397gAMR2inGYjfMxHiCtcqcLOnnn4zi93IjDLhk6AAAAAAAAAAAAAAAk36jVrnnnHft88VYBCHpeacK6o5zPdObzAAAAAAAAAe9yoxtI5Zz3PGiMZiOMxC4AAAAAAAAAAAAAAAAAADDpKyyiuN2U9NzAt104xMTsmMEWqnCZidsTgDgAAAAAAANWj7LGrW3U+qm8bpZ6tERvnOesvYAAAAAAAAAAAAAAAAAABKv9OFpPOIn29lVM0jPb6Ux7gygAAAAAERjkPqy+qOseoLYAAAAAAAAAAAAAAAAAAACPeqsa6p54eGXsoXm9RRGETjVw4dUoAAAAAAAicM+AAuROMYxsnN1Pud7iI1atm6eHKVCJAAAAAAAAAAAAAAAGa2vtNOztTy2eLBbXiqvbOXCMoBvtr7TTlHanls8WK1vddW/COFOXm8AAAAAAAAAAAB92VtVT9MzHLbHg+AG6z0h/FT30/DVZXiirZMY8JylHcBeEeyvNdOycY4TnDbY3+mcquzPHbANY5E45xnHJ0AAAAAGG9X3Ds0bd9XwD3vF6poy21cI9062vFVe2cuEZQ8gAAAAAAAAAAAAAAAAAAAAHpY21VGye7dPc3WF+pnKrsz5fhNAXRJu15mjnTw+FWiqJiJjZOYOgA+bX6Z6T6IboAAAAAAAAAAAAAAAAAAAAAAAAAq3D7dPf8A7SANAAP/2Q=="
-                            alt="">
-
-                        <div class="absolute left-14 bottom-8 flex-center ">
-                            <div
-                                class=" cursor-pointer w-9 h-9 bg-white rounded-full flex-center border border-[#CED5DC]">
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.68917 3.14588C4.53916 3.38331 4.33902 3.58503 4.10278 3.73691C3.86655 3.88879 3.59994 3.98713 3.32167 4.02505C3.005 4.07005 2.69083 4.11838 2.37667 4.17088C1.49917 4.31672 0.875 5.08922 0.875 5.97838V13C0.875 13.4973 1.07254 13.9742 1.42417 14.3259C1.77581 14.6775 2.25272 14.875 2.75 14.875H15.25C15.7473 14.875 16.2242 14.6775 16.5758 14.3259C16.9275 13.9742 17.125 13.4973 17.125 13V5.97838C17.125 5.08922 16.5 4.31672 15.6233 4.17088C15.3089 4.1185 14.9939 4.06988 14.6783 4.02505C14.4002 3.98702 14.1338 3.88862 13.8977 3.73675C13.6616 3.58488 13.4616 3.38321 13.3117 3.14588L12.6267 2.04922C12.4728 1.7993 12.261 1.59013 12.0092 1.43941C11.7574 1.2887 11.473 1.20088 11.18 1.18338C9.72771 1.10538 8.27229 1.10538 6.82 1.18338C6.52705 1.20088 6.24262 1.2887 5.9908 1.43941C5.73898 1.59013 5.52718 1.7993 5.37333 2.04922L4.68917 3.14588V3.14588Z"
-                                        stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M12.75 8.625C12.75 9.61956 12.3549 10.5734 11.6516 11.2766C10.9484 11.9799 9.99456 12.375 9 12.375C8.00544 12.375 7.05161 11.9799 6.34835 11.2766C5.64509 10.5734 5.25 9.61956 5.25 8.625C5.25 7.63044 5.64509 6.67661 6.34835 5.97335C7.05161 5.27009 8.00544 4.875 9 4.875C9.99456 4.875 10.9484 5.27009 11.6516 5.97335C12.3549 6.67661 12.75 7.63044 12.75 8.625V8.625ZM14.625 6.75H14.6317V6.75667H14.625V6.75Z"
-                                        stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-
-
-                            <div class="tooltip_options rounded-t-md bg-white">
-                                <div class="option ">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1 14.5V16.75C1 17.3467 1.23705 17.919 1.65901 18.341C2.08097 18.7629 2.65326 19 3.25 19H16.75C17.3467 19 17.919 18.7629 18.341 18.341C18.7629 17.919 19 17.3467 19 16.75V14.5M5.5 5.5L10 1M10 1L14.5 5.5M10 1V14.5"
-                                            stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    Cargar foto
-                                </div>
-                                <div class="option ">
-                                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.74 8.00003L11.394 17M6.606 17L6.26 8.00003M16.228 4.79003C16.57 4.84203 16.91 4.89703 17.25 4.95603M16.228 4.79103L15.16 18.673C15.1164 19.2383 14.8611 19.7662 14.445 20.1513C14.029 20.5364 13.4829 20.7502 12.916 20.75H5.084C4.5171 20.7502 3.97102 20.5364 3.55498 20.1513C3.13894 19.7662 2.88359 19.2383 2.84 18.673L1.772 4.79003M16.228 4.79003C15.0739 4.61555 13.9138 4.48313 12.75 4.39303M0.75 4.95503C1.09 4.89603 1.43 4.84103 1.772 4.79003M1.772 4.79003C2.92613 4.61555 4.08623 4.48313 5.25 4.39303M12.75 4.39303V3.47703C12.75 2.29703 11.84 1.31303 10.66 1.27603C9.55362 1.24067 8.44638 1.24067 7.34 1.27603C6.16 1.31303 5.25 2.29803 5.25 3.47703V4.39303M12.75 4.39303C10.2537 4.20011 7.74628 4.20011 5.25 4.39303"
-                                            stroke="#0B0F22" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    Eliminar
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <hr class="mb-9">
-
-
-                <h3 class="uppercase mb-4 mt-12">DATOS Personales</h3>
-                <div class="form-control-group">
-                    <div class="form-control">
-                        <label for="n_id_tbt">Nombre y Apellido</label>
-                        <input value="Elena Miranda" id="n_id_tbt" type="text">
-                    </div>
-                    <div class="form-control">
-                        <label for="n_id_tbt">Teléfono</label>
-                        <input value="098 765 4321" id="n_id_tbt" type="text">
-                    </div>
-                </div>
-                <div class="form-control-group">
-                    <div class="form-control">
-                        <label for="n_id_tbt">Cargo</label>
-                        <input value="Recursos Humanos" id="n_id_tbt" type="text">
-                    </div>
-                    <div class="form-control">
-                        <label for="Ciudad">Permisos</label>
-                        <div class="selection">
-                            <select name="user" id="Ciudad">
-                                <option value="option1">Administrador</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="my-9">
-
-                <h3 class="uppercase mb-4 ">datos de acceso</h3>
-
-                <div class="form-control-group">
-                    <div class="form-control">
-                        <label for="n_id_tbt">Correo electrónico</label>
-                        <input disabled value="elena@correo.gov" id="n_id_tbt" type="email">
-                    </div>
-                    <div class="form-control">
-                        <label for="n_id_tbt">Contraseña</label>
-                        <input disabled value="elena@correo.gov" id="n_id_tbt" type="password">
-                    </div>
-                </div>
-
-
-                <div class="form-control-group mt-6">
-
-                    <div class="w-full text-primary uppercase items-center flex gap-4">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.125 2.625V11.375C17.125 11.8723 16.9275 12.3492 16.5758 12.7008C16.2242 13.0525 15.7473 13.25 15.25 13.25H2.75C2.25272 13.25 1.77581 13.0525 1.42417 12.7008C1.07254 12.3492 0.875 11.8723 0.875 11.375V2.625M17.125 2.625C17.125 2.12772 16.9275 1.65081 16.5758 1.29917C16.2242 0.947544 15.7473 0.75 15.25 0.75H2.75C2.25272 0.75 1.77581 0.947544 1.42417 1.29917C1.07254 1.65081 0.875 2.12772 0.875 2.625M17.125 2.625V2.8275C17.125 3.14762 17.0431 3.46242 16.887 3.74191C16.7309 4.0214 16.5059 4.25628 16.2333 4.42417L9.98333 8.27C9.68767 8.45211 9.34725 8.54854 9 8.54854C8.65275 8.54854 8.31233 8.45211 8.01667 8.27L1.76667 4.425C1.4941 4.25711 1.26906 4.02224 1.11297 3.74275C0.95689 3.46325 0.874965 3.14845 0.875 2.82833V2.625"
-                                stroke="#39619A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        cambiar correo
-                    </div>
-
-                    <div class="w-full text-primary uppercase items-center flex gap-4">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.125 2.625V11.375C17.125 11.8723 16.9275 12.3492 16.5758 12.7008C16.2242 13.0525 15.7473 13.25 15.25 13.25H2.75C2.25272 13.25 1.77581 13.0525 1.42417 12.7008C1.07254 12.3492 0.875 11.8723 0.875 11.375V2.625M17.125 2.625C17.125 2.12772 16.9275 1.65081 16.5758 1.29917C16.2242 0.947544 15.7473 0.75 15.25 0.75H2.75C2.25272 0.75 1.77581 0.947544 1.42417 1.29917C1.07254 1.65081 0.875 2.12772 0.875 2.625M17.125 2.625V2.8275C17.125 3.14762 17.0431 3.46242 16.887 3.74191C16.7309 4.0214 16.5059 4.25628 16.2333 4.42417L9.98333 8.27C9.68767 8.45211 9.34725 8.54854 9 8.54854C8.65275 8.54854 8.31233 8.45211 8.01667 8.27L1.76667 4.425C1.4941 4.25711 1.26906 4.02224 1.11297 3.74275C0.95689 3.46325 0.874965 3.14845 0.875 2.82833V2.625"
-                                stroke="#39619A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        cambiar correo
-                    </div>
-
-
-                </div>
-
-
-
-                <hr class="my-6">
-                <div class="flex justify-between">
-                    <a onclick="showModal('#user-form-modal')" href="#" class="btn primary  ">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.5 8.75L7.5 14.75L16.5 1.25" stroke="white" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Guardar cambios
-                    </a>
-
-
-
-                </div>
-            </form>
-
-        </div>
-    </div>
 
 
     <footer class="footer font-sm bg-primary">
@@ -629,8 +399,8 @@
         </div>
     </footer>
 
-
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/toggle-list.js"></script>
 
 </body>
 
