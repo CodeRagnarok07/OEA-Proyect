@@ -238,6 +238,19 @@ textarea,
 }
 
 
+.input_file {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    .btn{
+        margin: 4px 0px;
+    }
+}
+
+
+// ******** form *******//
+
 .form_step {
     overflow: hidden;
 
@@ -404,7 +417,7 @@ textarea,
     background-color: v.$gray2;
 
 
-    .item-toggle-list{
+    .item-toggle-list {
         padding: 0.75rem 1rem;
         border-bottom: 1px solid white;
         display: flex;
@@ -412,19 +425,21 @@ textarea,
         justify-content: space-between;
     }
 
-    ul{
+    ul {
         margin-left: 24px;
-        li{
+
+        li {
             @extend .item-toggle-list;
 
-            .editar{
+            .editar {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 color: v.$primary;
                 text-transform: uppercase;
                 cursor: pointer;
-                svg{
+
+                svg {
                     margin-right: 10px;
                 }
             }

@@ -466,6 +466,16 @@ textarea:disabled,
   border: none;
 }
 
+.input_file {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.input_file .btn {
+  margin: 4px 0px;
+}
+
 .form_step {
   overflow: hidden;
   scroll-behavior: smooth;
